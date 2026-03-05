@@ -15,6 +15,13 @@ public class Player_Movement : MonoBehaviour
     bool isSlidingOnWall = false;
 
 
+    public Projectile projectilePrefab;
+    public Transform LaunchOffset;
+    public bool hasGun = true;
+    public int maxBullets = 10;
+    private int amountOfBullets = 0;
+    public float reloadSpeed = 2f;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,6 +29,7 @@ public class Player_Movement : MonoBehaviour
         // get the gravity value for calculating jump height
         gravity = Physics2D.gravity.y;
         gravity *= rb.gravityScale;
+        InvokeRepeating(nameof(reloadGun), reloadSpeed, reloadSpeed);
     }
 
     // Update is called once per frame
@@ -65,5 +73,23 @@ public class Player_Movement : MonoBehaviour
         bool leftWall = Physics2D.Raycast(wallCheck.position, Vector2.left, wallCheckDistance, LayerMask.GetMask("Wall"));
         bool rightWall = Physics2D.Raycast(wallCheck.position, Vector2.right, wallCheckDistance, LayerMask.GetMask("Wall"));
         return leftWall || rightWall;
+    }
+
+
+    public void onShoot(InputAction.CallbackContext context)
+    {
+        if (hasGun && amountOfBullets>0)
+        {
+            amountOfBullets -= 1;
+            Instantiate(projectilePrefab, LaunchOffset.position, transform.rotation);
+        }
+    }
+
+    private void reloadGun()
+    {
+        if (hasGun && amountOfBullets < maxBullets)
+        {
+            amountOfBullets += 1;
+        }
     }
 }
