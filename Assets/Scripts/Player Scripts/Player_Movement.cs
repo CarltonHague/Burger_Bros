@@ -4,19 +4,22 @@ using UnityEngine.InputSystem.XR;
 public class Player_Movement : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
-    [SerializeField] Transform wallCheck;
-    [SerializeField] float wallCheckDistance;
-    [SerializeField] float wallSlideSpeed = -2f;
-
-
     private Rigidbody2D rb;
     private Vector2 moveInput;
-   
+    private Player_Dash dashScript;
+    private int playerFacingDirection = 1;
+
+    public int getPlayerFacingDirection => playerFacingDirection;
+    public Vector2 getMoveInput => moveInput;
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        // get the gravity value for calculating jump height
+        dashScript = GetComponent<Player_Dash>();
+       
 
     }
 
@@ -28,6 +31,10 @@ public class Player_Movement : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        if(dashScript.getIsDashing)
+        {
+            return;
+        }
         rb.linearVelocity = new Vector2(moveInput.x * speed, rb.linearVelocity.y);
 
     }
@@ -35,7 +42,17 @@ public class Player_Movement : MonoBehaviour
 
     public void move(InputAction.CallbackContext context)
     {
-        moveInput = context.ReadValue<Vector2>();
+        if (dashScript.getIsDashing)
+        {
+            return;
+        }
+            moveInput = context.ReadValue<Vector2>();
+
+        if(moveInput.x != 0)
+        {
+            playerFacingDirection = (int)Mathf.Sign(moveInput.x);
+        }
+        
     }
 
 }

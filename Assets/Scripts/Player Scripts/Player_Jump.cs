@@ -6,12 +6,14 @@ public class Player_Jump : MonoBehaviour
     private float gravity = -9.81f;
     private Rigidbody2D rb;
     private Vector2 moveInput;
+    private Player_Dash dashScript;
 
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        dashScript = GetComponent<Player_Dash>();
         rb = GetComponent<Rigidbody2D>();
         // get the gravity value for calculating jump height
         gravity = Physics2D.gravity.y;
@@ -20,7 +22,7 @@ public class Player_Jump : MonoBehaviour
     }
     public void jump(InputAction.CallbackContext context)
     {
-        if (context.performed && isGrounded())
+        if (context.performed && isGrounded() && !dashScript.getIsDashing)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocityX, Mathf.Sqrt(jumpHeight * -2f * gravity));
         }
