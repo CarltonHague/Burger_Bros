@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3148392266942132386}
   - component: {fileID: 8388740047625742145}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mustard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,9 +103,9 @@ GameObject:
   - component: {fileID: 7301732738498431850}
   - component: {fileID: 5518120729161238974}
   - component: {fileID: 7192248263335344632}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Projectile
-  m_TagString: Untagged
+  m_TagString: Player Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
