@@ -1294,6 +1294,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6949044474674334104, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
+      propertyPath: ammoUIDisplay
+      value: 
+      objectReference: {fileID: 1499043156}
     - target: {fileID: 8817766720876437755, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.34
@@ -1351,7 +1355,7 @@ GameObject:
   - component: {fileID: 1499043157}
   - component: {fileID: 1499043156}
   m_Layer: 5
-  m_Name: Image
+  m_Name: AmmoDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
