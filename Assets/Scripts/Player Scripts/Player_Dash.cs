@@ -12,8 +12,7 @@ public class Player_Dash : MonoBehaviour
     [SerializeField] float dashHitboxRadius;
 
     Player_Movement player_Movement;
-
-
+    private bool dashCancelled = false;
     private SpriteRenderer spriteRenderer;
     private BoxCollider2D normalHitbox;
     private CircleCollider2D dashHitbox;
@@ -54,7 +53,7 @@ public class Player_Dash : MonoBehaviour
     }
     public void dash(InputAction.CallbackContext context)
     {
-        if (context.performed && canDash)
+        if (context.performed && canDash && !isDashing)
         {
             StartCoroutine(dash());
         }
@@ -63,7 +62,7 @@ public class Player_Dash : MonoBehaviour
     {
         // set he player to dashing
         isDashing = true;
-
+        dashCancelled = false;
         // disable the normal hitbox and enable the dash hitbox
         normalHitbox.enabled = false;
         dashHitbox.enabled = true;
@@ -94,10 +93,10 @@ public class Player_Dash : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
 
         // dash in the direction for the duration of the dash
-        while (dashTimer < dashDurationInSeconds)
+        while (dashTimer < dashDurationInSeconds && !dashCancelled)
         {
             rb.linearVelocity = new Vector2(Direction * dashSpeed, 0);
-            dashTimer += Time.deltaTime;
+            dashTimer += Time.fixedDeltaTime;
             yield return new WaitForFixedUpdate();
         }
 
@@ -112,5 +111,12 @@ public class Player_Dash : MonoBehaviour
         rb.gravityScale = originalGravityScale;
         transform.localScale = originalHitboxSize;
         isDashing = false;
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (isDashing)
+        {
+            dashCancelled = true;
+        }
     }
 }
