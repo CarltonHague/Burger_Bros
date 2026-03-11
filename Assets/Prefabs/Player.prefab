@@ -464,8 +464,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Player_Dash
   dashDurationInSeconds: 0.3
   dashSpeed: 15
-  dashCooldown: 1
+  dashRechargeSpeed: 0
   normalSprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   dashSprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   dashspriteScale: {x: 0.3, y: 0.3}
   dashHitboxRadius: 0.3
+  dashUITracker: {fileID: 8827192794614436270, guid: c1a37da18dfc9ba408c0e66967800cf0, type: 3}
+  dashUIArray:
+  - {fileID: 1428184107, guid: 895a8504648ced54a987b5b9574402d2, type: 3}
+  - {fileID: 4199945053758806347, guid: 895a8504648ced54a987b5b9574402d2, type: 3}
+  - {fileID: -8975386023217574741, guid: 895a8504648ced54a987b5b9574402d2, type: 3}
+  - {fileID: -3686962934808186811, guid: 895a8504648ced54a987b5b9574402d2, type: 3}
+  - {fileID: 6144381497578168920, guid: 895a8504648ced54a987b5b9574402d2, type: 3}
+  - {fileID: -224008003532068586, guid: 895a8504648ced54a987b5b9574402d2, type: 3}
+  - {fileID: 7459919997213556421, guid: 895a8504648ced54a987b5b9574402d2, type: 3}
+  - {fileID: 3458104076446597537, guid: 895a8504648ced54a987b5b9574402d2, type: 3}
+  - {fileID: 7335977447848403946, guid: 895a8504648ced54a987b5b9574402d2, type: 3}
