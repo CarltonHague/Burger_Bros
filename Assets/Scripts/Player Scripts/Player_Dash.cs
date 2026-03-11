@@ -1,16 +1,23 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 public class Player_Dash : MonoBehaviour
 {
     [SerializeField] float dashDurationInSeconds;
     [SerializeField] float dashSpeed;
-    [SerializeField] float dashCooldown;
+    [SerializeField] float dashRechargeSpeed;
     [SerializeField] Sprite normalSprite;
     [SerializeField] Sprite dashSprite;
     [SerializeField] Vector2 dashspriteScale;
     [SerializeField] float dashHitboxRadius;
+    [SerializeField] Image dashUITracker;
+    [SerializeField] Sprite[] dashUIArray;
 
+
+    private const int maxDashStamina = 8;
+    private int dashStamina = maxDashStamina;
+    private const int dashCost = 2;
     Player_Movement player_Movement;
     private bool dashCancelled = false;
     private SpriteRenderer spriteRenderer;
@@ -21,7 +28,7 @@ public class Player_Dash : MonoBehaviour
     private bool isDashing = false;
     private float originalGravityScale;
     private float dashCooldownTimer = 0f;
-    private bool canDash => dashCooldownTimer >= dashCooldown;
+    private bool canDash => dashStamina >= dashCost;
     public bool getIsDashing => isDashing;
     private void Awake()
     {
@@ -46,9 +53,18 @@ public class Player_Dash : MonoBehaviour
     {
         //tracks the cooldown timer for the dash
         dashCooldownTimer += Time.deltaTime;
-        if(dashCooldownTimer >= dashCooldown)
+        if (dashCooldownTimer >= dashRechargeSpeed)
         {
-          dashCooldownTimer = dashCooldown;
+            if (dashStamina == maxDashStamina)
+            {
+                return;
+            }
+            else
+            {
+                dashStamina++;
+                dashCooldownTimer = 0f;
+            }
+
         }
     }
     public void dash(InputAction.CallbackContext context)
@@ -56,6 +72,8 @@ public class Player_Dash : MonoBehaviour
         if (context.performed && canDash && !isDashing)
         {
             StartCoroutine(dash());
+            dashStamina -= dashCost;
+            changeUISprite();
         }
     }
     IEnumerator dash()
@@ -79,10 +97,10 @@ public class Player_Dash : MonoBehaviour
         transform.localScale = dashspriteScale;
 
         // dash in the direction the player is facing for the duration of the dash
-        
+
         //first get a noramlised dash direction 
         float Direction = player_Movement.getMoveInput.x;
-       
+
         if (Direction == 0)
         {
             Direction = player_Movement.getPlayerFacingDirection;
@@ -107,7 +125,6 @@ public class Player_Dash : MonoBehaviour
         dashHitbox.enabled = false;
         spriteRenderer.sprite = normalSprite;
         spriteRenderer.color = Color.white;
-        dashCooldownTimer = 0f;
         rb.gravityScale = originalGravityScale;
         transform.localScale = originalHitboxSize;
         isDashing = false;
@@ -118,5 +135,12 @@ public class Player_Dash : MonoBehaviour
         {
             dashCancelled = true;
         }
+ 
     }
+
+    void changeUISprite()
+    {
+        dashUITracker.sprite = dashUIArray[dashStamina];
+    }
+
 }
