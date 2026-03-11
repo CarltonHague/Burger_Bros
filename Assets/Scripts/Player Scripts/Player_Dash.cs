@@ -46,6 +46,7 @@ public class Player_Dash : MonoBehaviour
     void Start()
     {
         player_Movement = GetComponent<Player_Movement>();
+        changeUISprite();
     }
 
     // Update is called once per frame
@@ -63,6 +64,7 @@ public class Player_Dash : MonoBehaviour
             {
                 dashStamina++;
                 dashCooldownTimer = 0f;
+                changeUISprite();
             }
 
         }
@@ -140,7 +142,8 @@ public class Player_Dash : MonoBehaviour
 
     void changeUISprite()
     {
-        dashUITracker.sprite = dashUIArray[dashStamina];
+        int index = Mathf.Clamp(dashStamina, 0, dashUIArray.Length - 1);
+        dashUITracker.sprite = dashUIArray[index];
     }
 
 }
