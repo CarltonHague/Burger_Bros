@@ -6,9 +6,9 @@ public class Player_Shoot : MonoBehaviour
     [SerializeField] Projectile projectilePrefab;
     [SerializeField] Transform LaunchOffset;
     [SerializeField] bool hasGun = true;
-    [SerializeField] int maxBullets = 10;
-    [SerializeField] float reloadSpeed = 2f;
-    private int amountOfBullets = 10;
+    [SerializeField] int maxBullets = 5;
+    //[SerializeField] float reloadSpeed = 2f;
+    [SerializeField] int amountOfBullets = 5;
     public float shootCooldown = 0.5f;
     private bool onCooldown = false;
     //ammo ui
@@ -21,14 +21,13 @@ public class Player_Shoot : MonoBehaviour
     {
         if (hasGun && amountOfBullets < maxBullets)
         {
-            amountOfBullets += 1;
+            amountOfBullets  = maxBullets;
             changeAmmoSprite();
         }
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        InvokeRepeating(nameof(reloadGun), reloadSpeed, reloadSpeed);
     }
 
     public void shoot(InputAction.CallbackContext context)
@@ -55,4 +54,11 @@ public class Player_Shoot : MonoBehaviour
         ammoUIDisplay.sprite = ammoSpriteArray[amountOfBullets];
     }
 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Ketchup-PickUp")
+        {
+            reloadGun();
+        }
+    }
 }

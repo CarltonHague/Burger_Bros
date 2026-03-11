@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Platform
   - Player Projectile
+  - Ketchup-PickUp
+  - Collectable
   layers:
   - Default
   - TransparentFX
@@ -18,7 +20,7 @@ TagManager:
   - Wall
   - Player Projectile
   - Player
-  - 
+  - Collectable
   - 
   - 
   - 
