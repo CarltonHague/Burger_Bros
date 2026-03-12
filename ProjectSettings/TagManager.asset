@@ -9,6 +9,9 @@ TagManager:
   - Ketchup-PickUp
   - Collectable
   - PlayerCamera
+  - Enemy
+  - Enemy Projectile
+  - PlayerFeet
   layers:
   - Default
   - TransparentFX
@@ -22,7 +25,7 @@ TagManager:
   - Player Projectile
   - Player
   - Collectable
-  - 
+  - Enemy
   - 
   - 
   - 
