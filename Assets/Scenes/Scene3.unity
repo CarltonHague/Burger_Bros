@@ -785,58 +785,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1514855906880119866, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
-      propertyPath: m_GravityScale
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 2855095275239660900, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
       propertyPath: dashUITracker
       value: 
       objectReference: {fileID: 1573679766}
-    - target: {fileID: 2855095275239660900, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
-      propertyPath: dashRechargeSpeed
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 6500490034975575206, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6949044474674334104, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
-      propertyPath: maxBullets
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6949044474674334104, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
       propertyPath: ammoUIDisplay
       value: 
       objectReference: {fileID: 1499043156}
     - target: {fileID: 6949044474674334104, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
-      propertyPath: ammoSpriteArray.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6949044474674334104, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
-      propertyPath: 'ammoSpriteArray.Array.data[0]'
+      propertyPath: rotationPoint
       value: 
-      objectReference: {fileID: 145655524, guid: 5f206da962ae2f840b491f74933c69c8, type: 3}
-    - target: {fileID: 6949044474674334104, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
-      propertyPath: 'ammoSpriteArray.Array.data[1]'
-      value: 
-      objectReference: {fileID: 1108572123, guid: 5f206da962ae2f840b491f74933c69c8, type: 3}
-    - target: {fileID: 6949044474674334104, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
-      propertyPath: 'ammoSpriteArray.Array.data[2]'
-      value: 
-      objectReference: {fileID: 1159755268, guid: 5f206da962ae2f840b491f74933c69c8, type: 3}
-    - target: {fileID: 6949044474674334104, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
-      propertyPath: 'ammoSpriteArray.Array.data[3]'
-      value: 
-      objectReference: {fileID: 1362279945, guid: 5f206da962ae2f840b491f74933c69c8, type: 3}
-    - target: {fileID: 6949044474674334104, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
-      propertyPath: 'ammoSpriteArray.Array.data[4]'
-      value: 
-      objectReference: {fileID: 2141861189, guid: 5f206da962ae2f840b491f74933c69c8, type: 3}
-    - target: {fileID: 6949044474674334104, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
-      propertyPath: 'ammoSpriteArray.Array.data[5]'
-      value: 
-      objectReference: {fileID: 4663278433569566765, guid: 5f206da962ae2f840b491f74933c69c8, type: 3}
+      objectReference: {fileID: 1712420982}
     - target: {fileID: 8817766720876437755, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.67418
@@ -2376,6 +2340,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2892761176727965316, guid: c1a37da18dfc9ba408c0e66967800cf0, type: 3}
   m_PrefabInstance: {fileID: 1536164525}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1712420982 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5179323285993899927, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
+  m_PrefabInstance: {fileID: 332141797}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1779738856
 GameObject:
   m_ObjectHideFlags: 0
@@ -3215,7 +3184,7 @@ GameObject:
   - component: {fileID: 2037025819}
   m_Layer: 0
   m_Name: Player camera
-  m_TagString: Untagged
+  m_TagString: PlayerCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

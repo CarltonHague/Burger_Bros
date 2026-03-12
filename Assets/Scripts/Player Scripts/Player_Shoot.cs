@@ -14,6 +14,26 @@ public class Player_Shoot : MonoBehaviour
     //ammo ui
     public Image ammoUIDisplay;
     public Sprite[] ammoSpriteArray;
+    //rotation
+    public GameObject rotationPoint;
+    private Camera mainCam;
+    private Vector3 mousePos;
+    private Vector3 rotation;
+    private float rotZ = 0f;
+
+   
+    void Awake()
+    {
+        mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
+        rotation = mousePos - rotationPoint.transform.position;
+        rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
+        rotationPoint.transform.rotation = Quaternion.Euler(0, 0, rotZ);
+    }
 
 
 
@@ -25,17 +45,14 @@ public class Player_Shoot : MonoBehaviour
             changeAmmoSprite();
         }
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-    }
+
 
     public void shoot(InputAction.CallbackContext context)
     {
         if (hasGun && amountOfBullets > 0 && !onCooldown)
         {
             amountOfBullets -= 1;
-            Instantiate(projectilePrefab, LaunchOffset.position, transform.rotation);
+            Instantiate(projectilePrefab, LaunchOffset.position, LaunchOffset.transform.rotation);
             changeAmmoSprite();
             onCooldown = true;
             Invoke(nameof(turnOffCooldown), shootCooldown);
@@ -45,10 +62,7 @@ public class Player_Shoot : MonoBehaviour
     {
         onCooldown = false;
     }
-    // Update is called once per frame
-    void Update()
-    {
-    }
+
     private void changeAmmoSprite()
     {
         ammoUIDisplay.sprite = ammoSpriteArray[amountOfBullets];
