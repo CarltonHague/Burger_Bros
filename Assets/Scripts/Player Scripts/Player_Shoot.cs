@@ -54,7 +54,7 @@ public class Player_Shoot : MonoBehaviour
         ammoUIDisplay.sprite = ammoSpriteArray[amountOfBullets];
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Ketchup-PickUp")
         {
