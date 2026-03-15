@@ -13,7 +13,7 @@ public class Player_Dash : MonoBehaviour
     [SerializeField] float dashHitboxRadius;
     [SerializeField] Image dashUITracker;
     [SerializeField] Sprite[] dashUIArray;
-
+   
 
     private const int maxDashStamina = 8;
     private int dashStamina = maxDashStamina;
@@ -46,6 +46,7 @@ public class Player_Dash : MonoBehaviour
     void Start()
     {
         player_Movement = GetComponent<Player_Movement>();
+   
         changeUISprite();
     }
 
@@ -83,6 +84,7 @@ public class Player_Dash : MonoBehaviour
         // set he player to dashing
         isDashing = true;
         dashCancelled = false;
+        player_Movement.canMove = false;
         // disable the normal hitbox and enable the dash hitbox
         normalHitbox.enabled = false;
         dashHitbox.enabled = true;
@@ -130,6 +132,7 @@ public class Player_Dash : MonoBehaviour
         rb.gravityScale = originalGravityScale;
         transform.localScale = originalHitboxSize;
         isDashing = false;
+        player_Movement.canMove = true;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

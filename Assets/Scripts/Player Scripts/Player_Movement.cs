@@ -6,9 +6,10 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] private float speed = 5f;
     private Rigidbody2D rb;
     private Vector2 moveInput;
-    private Player_Dash dashScript;
+    
     private int playerFacingDirection = 1;
 
+    public bool canMove = false;
     public int getPlayerFacingDirection => playerFacingDirection;
     public Vector2 getMoveInput => moveInput;
     void Awake()
@@ -18,7 +19,7 @@ public class Player_Movement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        dashScript = GetComponent<Player_Dash>();
+       
        
 
     }
@@ -31,7 +32,7 @@ public class Player_Movement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if(dashScript.getIsDashing)
+        if(!canMove)
         {
             return;
         }
@@ -42,7 +43,7 @@ public class Player_Movement : MonoBehaviour
 
     public void move(InputAction.CallbackContext context)
     {
-        if (dashScript.getIsDashing)
+        if (!canMove)
         {
             return;
         }
