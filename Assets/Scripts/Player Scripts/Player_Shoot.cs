@@ -72,7 +72,11 @@ public class Player_Shoot : MonoBehaviour
     {
         if (other.gameObject.tag == "Ketchup-PickUp")
         {
-            reloadGun();
+            float distance = Vector2.Distance(transform.position, other.transform.position);
+            if (distance < 2f)
+            {
+                reloadGun();
+            }
         }
     }
 }

@@ -60,10 +60,23 @@ public class Tomato : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "PlayerFeet")
+        if (other.gameObject.tag == "PlayerFeet" || other.gameObject.tag == "Player Projectile")
         {
-            Instantiate(ketchupDrop, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            killMeNow();
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "PlayerFeet" || other.gameObject.tag == "Player Projectile")
+        {
+            killMeNow();
+        }
+    }
+
+    private void killMeNow()
+    {
+        Instantiate(ketchupDrop, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }
