@@ -143,9 +143,10 @@ MonoBehaviour:
   bulletPrefab: {fileID: 775803040242398019, guid: 906ad3ae7c96d0d47a3d771296bdfcbb, type: 3}
   ketchupDrop: {fileID: 3686682569582451360, guid: dc563aaa5c06b7d4b8f1d1adcaa7971f, type: 3}
   speed: 1
-  aggroDistance: 10
+  patrolRange: 2
+  aggroDistance: 8
   shootingDistance: 4
-  shootingSpeed: 2.34
+  secBetweenShots: 3
 --- !u!50 &8746256858041561497
 Rigidbody2D:
   serializedVersion: 5
