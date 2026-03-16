@@ -2880,6 +2880,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1232221450}
+    - target: {fileID: 3192204929061031674, guid: f95242e18f89a4a4c9555a7c1a2187ed, type: 3}
+      propertyPath: shootingSpeed
+      value: 2.54
+      objectReference: {fileID: 0}
     - target: {fileID: 7582633754055651959, guid: f95242e18f89a4a4c9555a7c1a2187ed, type: 3}
       propertyPath: m_Name
       value: Tomato_Enemy (1)
