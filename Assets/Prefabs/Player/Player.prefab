@@ -222,6 +222,7 @@ GameObject:
   - component: {fileID: 2862110831657170775}
   - component: {fileID: 6783998213268105294}
   - component: {fileID: 8030497440834297814}
+  - component: {fileID: 4167014464281406223}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -559,6 +560,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player_Movement
   speed: 5
+  airMoveSpeed: 2
+  maxAirMoveSpeed: 5
+  slipperyControl: 0.1
+  MaxSpeed: 10
+  directionChangeControl: 0.05
   canMove: 0
 --- !u!114 &8170462624405330309
 MonoBehaviour:
@@ -572,7 +578,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 380d0c887d18e364a9d4d6aa2ca751ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player_Jump
-  jumpHeight: 3
+  baseJumpHeight: 3
+  fallSpeedMultiplier: 2.5
+  heldJumpMultipler: 2
+  terminalFallSpeed: 50
 --- !u!114 &6949044474674334104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -811,6 +820,28 @@ MonoBehaviour:
   grappleDetector: {fileID: 3409347391161847009}
   grapplePullSpeed: 10
   grappleStopDistance: 1
+--- !u!114 &4167014464281406223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6500490034975575206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d64a1098b8e3d4f4295bdfd89abb14a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player_Health
+  health: 3
+  maxHealth: 3
+  heartUIDisplay: {fileID: 0}
+  heartSprites:
+  - {fileID: 937881118, guid: ce7d59091e3cc04459465e1e41b01f9f, type: 3}
+  - {fileID: -1527671966, guid: ce7d59091e3cc04459465e1e41b01f9f, type: 3}
+  - {fileID: 740823311, guid: ce7d59091e3cc04459465e1e41b01f9f, type: 3}
+  - {fileID: 1491335115882531572, guid: ce7d59091e3cc04459465e1e41b01f9f, type: 3}
+  startOfLevel: {fileID: 0}
+  lastCheckpoint: {fileID: 0}
 --- !u!1 &7749750866442641782
 GameObject:
   m_ObjectHideFlags: 0

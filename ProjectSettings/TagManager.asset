@@ -14,6 +14,7 @@ TagManager:
   - PlayerFeet
   - GrapplePoint
   - Slippery
+  - CheckPoint
   layers:
   - Default
   - TransparentFX
@@ -32,7 +33,7 @@ TagManager:
   - OuterBorder
   - BouncePad
   - Slippery
-  - 
+  - CheckPoint
   - 
   - 
   - 
