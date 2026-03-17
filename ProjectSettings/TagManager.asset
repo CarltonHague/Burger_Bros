@@ -13,6 +13,7 @@ TagManager:
   - Enemy Projectile
   - PlayerFeet
   - GrapplePoint
+  - Slippery
   layers:
   - Default
   - TransparentFX
@@ -29,8 +30,8 @@ TagManager:
   - Enemy
   - Grapple Point
   - OuterBorder
-  - 
-  - 
+  - BouncePad
+  - Slippery
   - 
   - 
   - 
