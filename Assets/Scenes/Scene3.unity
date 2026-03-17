@@ -788,6 +788,18 @@ PrefabInstance:
       propertyPath: dashUITracker
       value: 
       objectReference: {fileID: 1573679766}
+    - target: {fileID: 3229304778277561858, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229304778277561858, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
+      propertyPath: airMoveSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229304778277561858, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
+      propertyPath: maxAirMoveSpeed
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6500490034975575206, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
       propertyPath: m_Name
       value: Player
@@ -799,6 +811,22 @@ PrefabInstance:
     - target: {fileID: 8030497440834297814, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
       propertyPath: grapplePullSpeed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170462624405330309, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
+      propertyPath: baseJumpHeight
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170462624405330309, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
+      propertyPath: heldJumpMultipler
+      value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170462624405330309, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
+      propertyPath: terminalFallSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170462624405330309, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
+      propertyPath: fallSpeedMultiplier
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8817766720876437755, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
       propertyPath: m_LocalPosition.x
