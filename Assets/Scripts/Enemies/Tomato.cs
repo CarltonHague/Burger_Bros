@@ -76,15 +76,22 @@ public class Tomato : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "PlayerFeet" || other.gameObject.tag == "Player Projectile")
+        if (other.gameObject.tag == "Player Projectile")
         {
             killMeNow();
+        }
+        else if (other.gameObject.tag == "PlayerFeet")
+        {
+            if (other.transform.position.y > transform.position.y)
+            {
+                killMeNow();
+            }
         }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "PlayerFeet" || other.gameObject.tag == "Player Projectile")
+        if (other.gameObject.tag == "Player Projectile")
         {
             killMeNow();
         }

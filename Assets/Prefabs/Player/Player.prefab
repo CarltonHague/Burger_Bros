@@ -223,6 +223,7 @@ GameObject:
   - component: {fileID: 6783998213268105294}
   - component: {fileID: 8030497440834297814}
   - component: {fileID: 4167014464281406223}
+  - component: {fileID: 7958441446855927934}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -564,7 +565,7 @@ MonoBehaviour:
   maxAirMoveSpeed: 5
   slipperyControl: 0.1
   MaxSpeed: 10
-  directionChangeControl: 0.05
+  directionChangeControl: 0.1
   canMove: 0
 --- !u!114 &8170462624405330309
 MonoBehaviour:
@@ -842,6 +843,19 @@ MonoBehaviour:
   - {fileID: 1491335115882531572, guid: ce7d59091e3cc04459465e1e41b01f9f, type: 3}
   startOfLevel: {fileID: 0}
   lastCheckpoint: {fileID: 0}
+--- !u!114 &7958441446855927934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6500490034975575206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea135ea3318b2904d899014a716d064f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player_Coins
+  coinText: {fileID: 0}
 --- !u!1 &7749750866442641782
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,7 +882,7 @@ Transform:
   m_GameObject: {fileID: 7749750866442641782}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.9, z: 0}
+  m_LocalPosition: {x: 0, y: -0.95, z: 0}
   m_LocalScale: {x: 1.3, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

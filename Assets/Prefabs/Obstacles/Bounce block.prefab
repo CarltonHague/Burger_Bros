@@ -151,4 +151,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e87dc5c443a164045a365dd71ce2aced, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BouncePad
-  bounceForce: 15
+  bounceForce: 20

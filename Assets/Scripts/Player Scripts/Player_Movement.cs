@@ -14,6 +14,7 @@ public class Player_Movement : MonoBehaviour
     private bool isOnSlipperySurface = false;
     private int playerFacingDirection = 1;
 
+
     public bool canMove = true;
     public int getPlayerFacingDirection => playerFacingDirection;
     public Vector2 getMoveInput => moveInput;
@@ -44,7 +45,7 @@ public class Player_Movement : MonoBehaviour
             return;
         }
         // if the player is on the ground allow them to do left right movement at full speed
-        if (!Player_Jump.isInAir() && !isOnSlipperySurface)
+        if (!isOnSlipperySurface)
         {
             float targetSpeed = moveInput.x * speed;
             targetSpeed = Mathf.Clamp(targetSpeed, -MaxSpeed, MaxSpeed);
@@ -85,12 +86,12 @@ public class Player_Movement : MonoBehaviour
 
         }
         // if the player is in the air allow them to move but with less control and a max speed
-        if (Player_Jump.isInAir())
-        {
-            float newAirMoveSpeed = rb.linearVelocityX + (moveInput.x * airMoveSpeed) * Time.fixedDeltaTime;
-            newAirMoveSpeed = Mathf.Clamp(newAirMoveSpeed, -maxAirMoveSpeed, maxAirMoveSpeed);
-            rb.linearVelocityX = newAirMoveSpeed;
-        }
+        //if (Player_Jump.isInAir())
+        //{
+        //    float newAirMoveSpeed = rb.linearVelocityX + (moveInput.x * airMoveSpeed) * Time.fixedDeltaTime;
+        //    newAirMoveSpeed = Mathf.Clamp(newAirMoveSpeed, -maxAirMoveSpeed, maxAirMoveSpeed);
+        //    rb.linearVelocityX = newAirMoveSpeed;
+        //}
     }
 
 

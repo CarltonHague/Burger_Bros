@@ -15,6 +15,7 @@ TagManager:
   - GrapplePoint
   - Slippery
   - CheckPoint
+  - SeasameSeed
   layers:
   - Default
   - TransparentFX
