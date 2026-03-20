@@ -17,23 +17,16 @@ public class Tomato : MonoBehaviour
     //shooting
     private float distance;
     private Vector2 direction;
-    private bool aggro = false;
     public float aggroDistance;
     public float shootingDistance;
     private float shootingAngle = 0;
     public float secBetweenShots = 3;
     private float cooldown = 0;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
-        distance = Vector2.Distance(transform.position, player.transform.position);
+        distance = Vector2.Distance(transform.position, player.transform.position); //calculate distance from player
         if (distance < shootingDistance)    //want to shoot
         {
             //calculate aim angle

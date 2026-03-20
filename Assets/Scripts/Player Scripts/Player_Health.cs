@@ -10,17 +10,8 @@ public class Player_Health : MonoBehaviour
     public Sprite[] heartSprites;
     public GameObject startOfLevel;
     public Transform lastCheckpoint;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+ 
+    
     private void takeDamage()
     {
         health--;
