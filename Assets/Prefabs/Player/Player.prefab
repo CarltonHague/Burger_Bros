@@ -561,8 +561,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player_Movement
   speed: 5
-  airMoveSpeed: 2
-  maxAirMoveSpeed: 5
+  airMoveSpeed: 3
+  maxAirMoveSpeed: 8
   slipperyControl: 0.1
   MaxSpeed: 10
   directionChangeControl: 0.1
@@ -579,10 +579,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 380d0c887d18e364a9d4d6aa2ca751ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player_Jump
-  baseJumpHeight: 3
-  fallSpeedMultiplier: 2.5
-  heldJumpMultipler: 2
-  terminalFallSpeed: 50
+  baseJumpHeight: 4
+  fallSpeedMultiplier: 1.5
+  heldJumpMultipler: 2.2
+  terminalFallSpeed: 100
 --- !u!114 &6949044474674334104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -819,7 +819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player_Grapple
   grappleDetector: {fileID: 3409347391161847009}
-  grapplePullSpeed: 10
+  grapplePullSpeed: 6
   grappleStopDistance: 1
 --- !u!114 &4167014464281406223
 MonoBehaviour:
@@ -843,6 +843,7 @@ MonoBehaviour:
   - {fileID: 1491335115882531572, guid: ce7d59091e3cc04459465e1e41b01f9f, type: 3}
   startOfLevel: {fileID: 0}
   lastCheckpoint: {fileID: 0}
+  invulnerabilityDuration: 2
 --- !u!114 &7958441446855927934
 MonoBehaviour:
   m_ObjectHideFlags: 0
