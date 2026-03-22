@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -10,22 +11,41 @@ public class Player_Health : MonoBehaviour
     public Sprite[] heartSprites;
     public GameObject startOfLevel;
     public Transform lastCheckpoint;
- 
-    
+    private BoxCollider2D playerHitBox;
+    private Rigidbody2D playerRigidbody;
+    [SerializeField] private float invulnerabilityDuration = 0.25f;
+    private bool isInvulnerable = false;
+
+
+    private void Awake()
+    {
+        playerHitBox = GetComponent<BoxCollider2D>();
+        health = maxHealth;
+        changeHeartSprite();
+        playerRigidbody = GetComponent<Rigidbody2D>();
+    }
+
     private void takeDamage()
     {
+        if (isInvulnerable)
+        {
+            return;
+        }
         health--;
-        if (health < 0)
+        if (health <= 0)
         {
             //spawn at start
-            transform.position = startOfLevel.transform.position;
+            playerRigidbody.position = startOfLevel.transform.position;
             lastCheckpoint = startOfLevel.transform;
+            playerRigidbody.linearVelocity = Vector2.zero;
             health = maxHealth;
+            
         }
         else
         {
             //spawn at last checkpoint
-            transform.position = lastCheckpoint.transform.position;
+            playerRigidbody.position = lastCheckpoint.transform.position;
+            playerRigidbody.linearVelocity = Vector2.zero;
         }
         changeHeartSprite();
     }
@@ -49,5 +69,24 @@ public class Player_Health : MonoBehaviour
         {
             lastCheckpoint = other.transform;
         }
+        if (other.gameObject.tag == "DeathZone")
+        {
+            if(playerHitBox.IsTouching(other))
+            {
+                takeDamage();
+                StartCoroutine(InvulnerabilityCoroutine());
+            }
+           
+        }
+
     }
+    private IEnumerator InvulnerabilityCoroutine()
+    {
+        
+        isInvulnerable = true;
+        yield return new WaitForSeconds(invulnerabilityDuration);
+        isInvulnerable = false;
+    }
+
 }
+

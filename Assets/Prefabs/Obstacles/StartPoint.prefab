@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2090740630874118273, guid: 2e7068a8f77b6c04cb21418cf6a7abd2, type: 3}
       propertyPath: m_Name
-      value: Check Point (1) Variant
+      value: StartPoint
       objectReference: {fileID: 0}
     - target: {fileID: 2120162869201499890, guid: 2e7068a8f77b6c04cb21418cf6a7abd2, type: 3}
       propertyPath: m_Enabled
@@ -59,6 +59,10 @@ PrefabInstance:
     - target: {fileID: 8497846126996507243, guid: 2e7068a8f77b6c04cb21418cf6a7abd2, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8497846126996507243, guid: 2e7068a8f77b6c04cb21418cf6a7abd2, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

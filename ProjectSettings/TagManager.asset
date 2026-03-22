@@ -16,6 +16,7 @@ TagManager:
   - Slippery
   - CheckPoint
   - SeasameSeed
+  - DeathZone
   layers:
   - Default
   - TransparentFX
@@ -35,7 +36,7 @@ TagManager:
   - BouncePad
   - Slippery
   - CheckPoint
-  - 
+  - DeathZone
   - 
   - 
   - 
@@ -53,5 +54,20 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: 1st layer
+    uniqueID: 263977503
+    locked: 0
+  - name: 2nd layer
+    uniqueID: 2317165453
+    locked: 0
+  - name: 3rd layer
+    uniqueID: 262829107
+    locked: 0
+  - name: 4th layer
+    uniqueID: 3204366013
+    locked: 0
   m_RenderingLayers:
   - Default
+  - 2nd layer
+  - 3rd layer
+  - 4th layer
