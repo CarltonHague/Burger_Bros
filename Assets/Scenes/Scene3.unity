@@ -345,11 +345,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7004160503090470500, guid: ecb15780f988f664ebde8eb9344d599c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -35.67
+      value: 82.79
       objectReference: {fileID: 0}
     - target: {fileID: 7004160503090470500, guid: ecb15780f988f664ebde8eb9344d599c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.23
+      value: 3.17
       objectReference: {fileID: 0}
     - target: {fileID: 7004160503090470500, guid: ecb15780f988f664ebde8eb9344d599c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1971,11 +1971,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7731721758989553723, guid: a3967c07c075ce841a91aa1e239d969b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -40.47
+      value: -28.01
       objectReference: {fileID: 0}
     - target: {fileID: 7731721758989553723, guid: a3967c07c075ce841a91aa1e239d969b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.06
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 7731721758989553723, guid: a3967c07c075ce841a91aa1e239d969b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2252,11 +2252,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9047733643207243478, guid: 9014db5f7e3be2140a4c3bb8924831a8, type: 3}
       propertyPath: m_LocalScale.x
-      value: 41.195694
+      value: 29.203627
       objectReference: {fileID: 0}
     - target: {fileID: 9047733643207243478, guid: 9014db5f7e3be2140a4c3bb8924831a8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.6204
+      value: -13.6237
       objectReference: {fileID: 0}
     - target: {fileID: 9047733643207243478, guid: 9014db5f7e3be2140a4c3bb8924831a8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2495,6 +2495,14 @@ PrefabInstance:
     - target: {fileID: 4011754043288711236, guid: add8e679d6b58c04aa05fe463bf2203d, type: 3}
       propertyPath: m_Name
       value: Block (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4323672089577138597, guid: add8e679d6b58c04aa05fe463bf2203d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 8.7085705
+      objectReference: {fileID: 0}
+    - target: {fileID: 4323672089577138597, guid: add8e679d6b58c04aa05fe463bf2203d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.6434
       objectReference: {fileID: 0}
     - target: {fileID: 8766323177108434233, guid: add8e679d6b58c04aa05fe463bf2203d, type: 3}
       propertyPath: m_LocalPosition.x
