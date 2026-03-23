@@ -224,6 +224,7 @@ GameObject:
   - component: {fileID: 8030497440834297814}
   - component: {fileID: 4167014464281406223}
   - component: {fileID: 7958441446855927934}
+  - component: {fileID: 6218215932807297046}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -857,6 +858,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player_Coins
   coinText: {fileID: 0}
+--- !u!114 &6218215932807297046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6500490034975575206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726bf50736aafdd45af264a0a2224ecb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SwitchCheck
 --- !u!1 &7749750866442641782
 GameObject:
   m_ObjectHideFlags: 0
