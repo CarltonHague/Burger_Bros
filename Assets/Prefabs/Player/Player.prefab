@@ -843,7 +843,7 @@ MonoBehaviour:
   - {fileID: 1491335115882531572, guid: ce7d59091e3cc04459465e1e41b01f9f, type: 3}
   startOfLevel: {fileID: 0}
   lastCheckpoint: {fileID: 0}
-  invulnerabilityDuration: 2
+  invulnerabilityDuration: 0.2
 --- !u!114 &7958441446855927934
 MonoBehaviour:
   m_ObjectHideFlags: 0
