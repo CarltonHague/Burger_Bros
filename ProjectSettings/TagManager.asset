@@ -17,6 +17,7 @@ TagManager:
   - CheckPoint
   - SeasameSeed
   - DeathZone
+  - Switch
   layers:
   - Default
   - TransparentFX
