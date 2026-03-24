@@ -43,8 +43,11 @@ public class Mushroom : MonoBehaviour
             distance = Vector2.Distance(transform.position, player.transform.position);
             if (distance < blockDistance)    //want to block
             {
-                Invoke(nameof(block), blockCooldown);
-                blocking = true;
+                if (player.transform.position.y < transform.position.y +1)  //only bother blocking if the player is not above us
+                {
+                    Invoke(nameof(block), blockCooldown);
+                    blocking = true;
+                }
             }
             else if (distance < aggroDistance)   //want to be aggro
             {
@@ -99,7 +102,7 @@ public class Mushroom : MonoBehaviour
         {
             killMeNow();
         }
-        else if (other.gameObject.tag == "PlayerFeet")
+        else if (other.gameObject.tag == "PlayerFeet" && blocking)
         {
             if (other.transform.position.y > transform.position.y)
             {

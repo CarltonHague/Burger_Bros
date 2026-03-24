@@ -3,10 +3,10 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public float speed = 10.0f;
-    private Vector3 dir = Vector2.right;
+
     private void Update()
     {
-        transform.position += dir * Time.deltaTime * speed;
+        transform.position += transform.right * Time.deltaTime * speed;
     }
 
 
@@ -35,8 +35,8 @@ public class Projectile : MonoBehaviour
 
     private void deflected()
     {
-        dir.x *= -1;
-        dir.y *= -1;
+        this.transform.eulerAngles += new Vector3(0, 0, 180);
         this.gameObject.tag = "Enemy Projectile";
+        this.gameObject.layer = LayerMask.NameToLayer("Enemy");
     }
 }
