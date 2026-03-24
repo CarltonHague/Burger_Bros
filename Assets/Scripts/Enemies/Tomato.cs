@@ -80,15 +80,12 @@ public class Tomato : MonoBehaviour
                 killMeNow();
             }
         }
-    }
-
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.tag == "Player Projectile")
+        else if (other.gameObject.tag == "DeathZone")
         {
             killMeNow();
         }
     }
+
 
     private void killMeNow()
     {

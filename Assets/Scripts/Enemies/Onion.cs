@@ -36,32 +36,28 @@ public class Onion : MonoBehaviour
 
 
 
-
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player Projectile")
         {
-            killMeNowPls();
+            killMeNow();
         }
         else if (other.gameObject.tag == "PlayerFeet")
         {
             if (other.transform.position.y > transform.position.y)
             {
-                killMeNowPls();
+                killMeNow();
             }
         }
-    }
-
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.tag == "Player Projectile")
+        else if (other.gameObject.tag == "DeathZone")
         {
-            killMeNowPls();
+            killMeNow();
         }
     }
 
-    private void killMeNowPls()
+
+
+    private void killMeNow()
     {
         Destroy(gameObject);
     }

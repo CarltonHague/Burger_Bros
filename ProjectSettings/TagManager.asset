@@ -18,6 +18,7 @@ TagManager:
   - SeasameSeed
   - DeathZone
   - Switch
+  - Deflection
   layers:
   - Default
   - TransparentFX

@@ -31,6 +31,7 @@ public class Player_Health : MonoBehaviour
         {
             return;
         }
+        StartCoroutine(InvulnerabilityCoroutine());
         health--;
         if (health <= 0)
         {
@@ -74,7 +75,6 @@ public class Player_Health : MonoBehaviour
             if(playerHitBox.IsTouching(other))
             {
                 takeDamage();
-                StartCoroutine(InvulnerabilityCoroutine());
             }
            
         }
