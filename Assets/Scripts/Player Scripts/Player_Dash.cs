@@ -95,8 +95,6 @@ public class Player_Dash : MonoBehaviour
         rb.gravityScale = 0;
         float dashTimer = 0f;
 
-        // change the player's color to red to indicate that they are dashing
-        spriteRenderer.color = Color.red;
 
         // make the player smaller during the dash 
         transform.localScale = dashspriteScale;
@@ -129,7 +127,6 @@ public class Player_Dash : MonoBehaviour
         normalHitbox.enabled = true;
         dashHitbox.enabled = false;
         spriteRenderer.sprite = normalSprite;
-        spriteRenderer.color = Color.white;
         rb.gravityScale = originalGravityScale;
         transform.localScale = originalHitboxSize;
         isDashing = false;

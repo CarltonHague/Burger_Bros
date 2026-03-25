@@ -13,6 +13,7 @@ public class Player_Movement : MonoBehaviour
     private Player_Jump Player_Jump;
     private bool isOnSlipperySurface = false;
     private int playerFacingDirection = 1;
+    private SpriteRenderer spriteRenderer;
 
 
     public bool canMove = true;
@@ -21,6 +22,7 @@ public class Player_Movement : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         canMove = true;
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -59,7 +61,6 @@ public class Player_Movement : MonoBehaviour
             // if the player is on a surface and is not doing input let them slide 
             if (moveInput.x == 0)
             {
-
                 return;
             }
 
@@ -97,15 +98,27 @@ public class Player_Movement : MonoBehaviour
 
     public void move(InputAction.CallbackContext context)
     {
-
         moveInput = context.ReadValue<Vector2>();
-
         if (moveInput.x != 0)
         {
             playerFacingDirection = (int)Mathf.Sign(moveInput.x);
+            flipSprite();
         }
-
     }
+
+    private void flipSprite()
+    {
+        if (playerFacingDirection > 0)
+        {
+            spriteRenderer.flipX = false;
+        }
+        else
+        {
+            spriteRenderer.flipX = true;
+        }
+    }
+
+
     // when the player collides with a slippery surface set the bool to true 
     private void OnCollisionEnter2D(Collision2D collision)
     {
