@@ -820,7 +820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player_Grapple
   grappleDetector: {fileID: 3409347391161847009}
-  grapplePullSpeed: 6
+  grapplePullSpeed: 8
   grappleStopDistance: 1
 --- !u!114 &4167014464281406223
 MonoBehaviour:

@@ -19,6 +19,7 @@ TagManager:
   - DeathZone
   - Switch
   - Deflection
+  - BreakPlatform
   layers:
   - Default
   - TransparentFX
