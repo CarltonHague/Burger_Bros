@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4321074309133250324}
   - component: {fileID: 3305111541619887180}
   - component: {fileID: 1780160962356552894}
-  m_Layer: 12
+  m_Layer: 19
   m_Name: tearLeft
   m_TagString: Enemy Projectile
   m_Icon: {fileID: 0}
@@ -27,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 2734946177544560182}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.514, y: -5.78, z: 0}
-  m_LocalScale: {x: 2.913471, y: 4.9389763, z: 1}
+  m_LocalPosition: {x: -3.93, y: -6.349, z: 0}
+  m_LocalScale: {x: 2.913471, y: 4.622882, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7004160503090470500}
@@ -323,6 +323,7 @@ MonoBehaviour:
   speed: 1
   patrolRange: 8
   aggroDistance: 1
+  deathDelay: 0.1
 --- !u!1 &8043860128085997090
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,7 +335,7 @@ GameObject:
   - component: {fileID: 5819719465824119320}
   - component: {fileID: 9213337310059687879}
   - component: {fileID: 3654174600133090540}
-  m_Layer: 12
+  m_Layer: 19
   m_Name: tearRight
   m_TagString: Enemy Projectile
   m_Icon: {fileID: 0}
@@ -350,8 +351,8 @@ Transform:
   m_GameObject: {fileID: 8043860128085997090}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.685, y: -5.718, z: 0}
-  m_LocalScale: {x: 2.810442, y: 4.954087, z: 1}
+  m_LocalPosition: {x: 3.73, y: -6.416, z: 0}
+  m_LocalScale: {x: 2.810442, y: 4.617209, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7004160503090470500}

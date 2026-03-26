@@ -14,6 +14,9 @@ public class Onion : MonoBehaviour
     private Vector2 direction;
     public float aggroDistance=1;
 
+    //death
+    public float deathDelay = 0.1f;
+
     // Update is called once per frame
     void Update()
     {
@@ -40,18 +43,18 @@ public class Onion : MonoBehaviour
     {
         if (other.gameObject.tag == "Player Projectile")
         {
-            killMeNow();
+            Invoke(nameof(killMeNow), deathDelay);
         }
         else if (other.gameObject.tag == "PlayerFeet")
         {
             if (other.transform.position.y > transform.position.y)
             {
-                killMeNow();
+                Invoke(nameof(killMeNow), deathDelay);
             }
         }
         else if (other.gameObject.tag == "DeathZone")
         {
-            killMeNow();
+            Invoke(nameof(killMeNow), deathDelay);
         }
     }
 

@@ -26,6 +26,9 @@ public class Mushroom : MonoBehaviour
     public float blockDuration = 4f;
     public float blockCooldown = 1f;
 
+    //death
+    public float deathDelay = 0.1f;
+
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -100,18 +103,18 @@ public class Mushroom : MonoBehaviour
     {
         if (other.gameObject.tag == "Player Projectile")
         {
-            killMeNow();
+            Invoke(nameof(killMeNow), deathDelay);
         }
         else if (other.gameObject.tag == "PlayerFeet" && blocking)
         {
             if (other.transform.position.y > transform.position.y)
             {
-                killMeNow();
+                Invoke(nameof(killMeNow), deathDelay);
             }
         }
         else if (other.gameObject.tag == "DeathZone")
         {
-            killMeNow();
+            Invoke(nameof(killMeNow), deathDelay);
         }
     }
 

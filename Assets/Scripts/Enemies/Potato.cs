@@ -26,6 +26,10 @@ public class Potato : MonoBehaviour
     public float attackDuration = 4f;
     public float attackCooldown = 1f;
 
+
+    //death
+    public float deathDelay = 0.1f;
+
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -84,18 +88,18 @@ public class Potato : MonoBehaviour
     {
         if (other.gameObject.tag == "Player Projectile")
         {
-            killMeNow();
+            Invoke(nameof(killMeNow), deathDelay);
         }
         else if (other.gameObject.tag == "PlayerFeet")
         {
             if (other.transform.position.y > transform.position.y)
             {
-                killMeNow();
+                Invoke(nameof(killMeNow), deathDelay);
             }
         }
         else if (other.gameObject.tag == "DeathZone")
         {
-            killMeNow();
+            Invoke(nameof(killMeNow), deathDelay);
         }
     }
 

@@ -13,7 +13,6 @@ public class Player_Jump : MonoBehaviour
    
     private void Awake()
     {
-        
         rb = GetComponent<Rigidbody2D>();
         // get the gravity value for calculating jump height
         gravity = Physics2D.gravity.y;
@@ -49,9 +48,7 @@ public class Player_Jump : MonoBehaviour
     }
     bool isGrounded()
     {
-
-        return rb.IsTouchingLayers(LayerMask.GetMask("Floor")) || rb.linearVelocityY == 0;
-        
+        return rb.IsTouchingLayers(LayerMask.GetMask("Floor")) || rb.linearVelocityY == 0 || rb.IsTouchingLayers(LayerMask.GetMask("Enemy"));
     }
 
     // Update is called once per frame
