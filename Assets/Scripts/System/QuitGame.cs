@@ -17,10 +17,10 @@ public class QuitGame : MonoBehaviour
     private void quitGame()
     {
         Application.Quit();
-        if (Application.isEditor)
-        {
-            UnityEditor.EditorApplication.isPlaying = false;
-        }
+        //if (Application.isEditor)
+        //{
+        //    UnityEditor.EditorApplication.isPlaying = false;
+        //}
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

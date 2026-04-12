@@ -20,6 +20,7 @@ TagManager:
   - Switch
   - Deflection
   - BreakPlatform
+  - Level End
   layers:
   - Default
   - TransparentFX
@@ -41,7 +42,7 @@ TagManager:
   - CheckPoint
   - DeathZone
   - Unshootable
-  - 
+  - Level End
   - 
   - 
   - 
@@ -68,6 +69,12 @@ TagManager:
     locked: 0
   - name: 4th layer
     uniqueID: 3204366013
+    locked: 0
+  - name: 5th layer
+    uniqueID: 1651724269
+    locked: 0
+  - name: 6th layer
+    uniqueID: 2726628819
     locked: 0
   m_RenderingLayers:
   - Default

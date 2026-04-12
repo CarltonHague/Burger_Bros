@@ -1,6 +1,4 @@
-using Unity.Cinemachine;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
 public class Player_Coins : MonoBehaviour
 {
