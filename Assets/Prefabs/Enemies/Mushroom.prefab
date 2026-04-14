@@ -81,8 +81,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1090601283
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -1361413154969471663, guid: 0c1b5c2afb515eb4bbf5c16f0533fa7f, type: 3}
@@ -191,6 +191,7 @@ MonoBehaviour:
   blockDistance: 8
   blockDuration: 4
   blockCooldown: 1
+  deathDelay: 0.1
 --- !u!1 &6207888718662908644
 GameObject:
   m_ObjectHideFlags: 0

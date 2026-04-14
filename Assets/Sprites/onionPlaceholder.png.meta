@@ -111,7 +111,7 @@ TextureImporter:
         serializedVersion: 2
         x: 22
         y: 286
-        width: 507
+        width: 506
         height: 559
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -132,9 +132,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 611
-        y: 265
-        width: 188
-        height: 342
+        y: 264
+        width: 189
+        height: 341
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,9 +153,9 @@ TextureImporter:
       name: onionPlaceholder_2
       rect:
         serializedVersion: 2
-        x: 989
+        x: 988
         y: 269
-        width: 187
+        width: 188
         height: 336
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
