@@ -188,9 +188,10 @@ MonoBehaviour:
   speed: 1
   patrolRange: 4
   aggroDistance: 7
-  attackDistance: 2
+  attackDistance: 1.4
   attackDuration: 4
-  attackCooldown: 1
+  attackCooldown: 0.2
+  deathDelay: 0.1
 --- !u!1 &4343129216439115117
 GameObject:
   m_ObjectHideFlags: 0
