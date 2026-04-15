@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player_Health : MonoBehaviour
 {
@@ -36,11 +37,8 @@ public class Player_Health : MonoBehaviour
         if (health <= 0)
         {
             //spawn at start
-            playerRigidbody.position = startOfLevel.transform.position;
-            lastCheckpoint = startOfLevel.transform;
-            playerRigidbody.linearVelocity = Vector2.zero;
-            health = maxHealth;
-            
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
         }
         else
         {
