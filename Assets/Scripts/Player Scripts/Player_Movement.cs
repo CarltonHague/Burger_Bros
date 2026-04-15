@@ -3,8 +3,6 @@ using UnityEngine.InputSystem;
 public class Player_Movement : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
-    [SerializeField] private float airMoveSpeed = 2f;
-    [SerializeField] private float maxAirMoveSpeed = 5f;
     [SerializeField] private float slipperyControl = 0.1f;
     [SerializeField] private float MaxSpeed = 10f;
     [SerializeField] private float directionChangeControl = 0.05f;
