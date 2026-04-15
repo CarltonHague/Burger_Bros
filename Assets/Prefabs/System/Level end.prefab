@@ -92,6 +92,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Endlevel
   SceneYouWantToLoad: Level 2
+  fadeImage: {fileID: 6881047989267596079, guid: 226ae4cd0207d3044830997920856faa, type: 3}
+  fadeTime: 2
 --- !u!1 &6637628969668630646
 GameObject:
   m_ObjectHideFlags: 0
