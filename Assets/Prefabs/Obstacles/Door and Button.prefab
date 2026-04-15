@@ -381,6 +381,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4323672089577138597, guid: add8e679d6b58c04aa05fe463bf2203d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.0292299
+      objectReference: {fileID: 0}
+    - target: {fileID: 4323672089577138597, guid: add8e679d6b58c04aa05fe463bf2203d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.7426
+      objectReference: {fileID: 0}
     - target: {fileID: 8766323177108434233, guid: add8e679d6b58c04aa05fe463bf2203d, type: 3}
       propertyPath: m_LocalScale.y
       value: 1.0068864
