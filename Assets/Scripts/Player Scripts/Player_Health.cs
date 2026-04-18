@@ -16,6 +16,7 @@ public class Player_Health : MonoBehaviour
     private Rigidbody2D playerRigidbody;
     [SerializeField] private float invulnerabilityDuration = 0.25f;
     private bool isInvulnerable = false;
+    [SerializeField] MovingDeathZone movingDeathZone;
 
 
     private void Awake()
@@ -24,6 +25,7 @@ public class Player_Health : MonoBehaviour
         health = maxHealth;
         changeHeartSprite();
         playerRigidbody = GetComponent<Rigidbody2D>();
+       
     }
 
     private void takeDamage()
@@ -45,6 +47,10 @@ public class Player_Health : MonoBehaviour
             //spawn at last checkpoint
             playerRigidbody.position = lastCheckpoint.transform.position;
             playerRigidbody.linearVelocity = Vector2.zero;
+            if (movingDeathZone != null)
+            {
+                movingDeathZone.resetToCheckpoint(lastCheckpoint);
+            }
         }
         changeHeartSprite();
     }
@@ -70,7 +76,7 @@ public class Player_Health : MonoBehaviour
         }
         if (other.gameObject.tag == "DeathZone")
         {
-            if(playerHitBox.IsTouching(other))
+            if(playerHitBox.IsTouching(other) && !isInvulnerable)
             {
                 takeDamage();
             }
