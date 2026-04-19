@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 1450595803893401428}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.655, y: 0.912, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 3.5172, y: 3.137, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7570297664874631939, guid: 864525b3c22c74f42b88505e9dd0c9c7, type: 3}
+  m_Sprite: {fileID: 238154998398191621, guid: 4f7d4886b9fefd6458a6b2b52dd5476b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -142,8 +142,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81c11f92084d46441962715d8a017a9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GrapplePoint
-  noGrappleSprite: {fileID: 7570297664874631939, guid: 864525b3c22c74f42b88505e9dd0c9c7, type: 3}
-  grappleSprite: {fileID: 3510101412361831057, guid: 28efcd16504b7dc4f9c544007c7ddeea, type: 3}
+  noGrappleSprite: {fileID: 238154998398191621, guid: 4f7d4886b9fefd6458a6b2b52dd5476b, type: 3}
+  grappleSprite: {fileID: 3453439468469815693, guid: 587198723ed70f442bd484582f445422, type: 3}
   inRange: 0
 --- !u!50 &5216318438957987925
 Rigidbody2D:

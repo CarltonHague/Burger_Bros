@@ -31,12 +31,12 @@ public class GrapplePoint : MonoBehaviour
         if (inRange)
         {
             spriteRenderer.sprite = grappleSprite;
-            spriteRenderer.color = Color.green;
+            
         }
         else
         {
             spriteRenderer.sprite = noGrappleSprite;
-            spriteRenderer.color = Color.white;
+            
         }
     }
 }

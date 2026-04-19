@@ -3,6 +3,12 @@ using UnityEngine;
 public class BouncePad : MonoBehaviour
 {
     [SerializeField] private float bounceForce = 10f;
+    Animator animator;
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+        animator.speed = 1.5f;
+    }
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -18,6 +24,7 @@ public class BouncePad : MonoBehaviour
                 //reset the player's vertical velocity to 0 before applying the bounce force to ensure a consistent bounce height regardless of the player's current vertical speed
                 playerRb.linearVelocity = new Vector2(playerRb.linearVelocityX, 0f); 
                 playerRb.AddForce(bounceVector, ForceMode2D.Impulse);
+               animator.SetTrigger("Bounce");
             }
         }
     }

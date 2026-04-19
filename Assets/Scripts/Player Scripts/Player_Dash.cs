@@ -8,14 +8,11 @@ public class Player_Dash : MonoBehaviour
     [SerializeField] float dashDurationInSeconds;
     [SerializeField] float dashSpeed;
     [SerializeField] float dashRechargeSpeed;
-    [SerializeField] Sprite normalSprite;
-    [SerializeField] Sprite dashSprite;
-    [SerializeField] Vector2 dashspriteScale;
     [SerializeField] float dashHitboxRadius;
     [SerializeField] Image dashUITracker;
     [SerializeField] Sprite[] dashUIArray;
    
-
+    private Animator animator;
     private const int maxDashStamina = 8;
     private int dashStamina = maxDashStamina;
     private const int dashCost = 2;
@@ -41,6 +38,7 @@ public class Player_Dash : MonoBehaviour
         dashHitbox.enabled = false;
         originalGravityScale = rb.gravityScale;
         originalHitboxSize = transform.localScale;
+        animator = GetComponent<Animator>();
 
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -86,10 +84,12 @@ public class Player_Dash : MonoBehaviour
         isDashing = true;
         dashCancelled = false;
         player_Movement.canMove = false;
+        animator.SetTrigger("Dash start");
+        
         // disable the normal hitbox and enable the dash hitbox
         normalHitbox.enabled = false;
         dashHitbox.enabled = true;
-        spriteRenderer.sprite = dashSprite;
+        
 
         // set the gravity scale to 0 so the player doesn't fall while dashing
         rb.gravityScale = 0;
@@ -97,7 +97,7 @@ public class Player_Dash : MonoBehaviour
 
 
         // make the player smaller during the dash 
-        transform.localScale = dashspriteScale;
+       
 
         // dash in the direction the player is facing for the duration of the dash
 
@@ -124,13 +124,15 @@ public class Player_Dash : MonoBehaviour
         // after the time for the dash is up, reset the player's velocity and hitbox and set the player back to normal
         // reset the player's velocity to 0 and set the player back to normal
         rb.linearVelocity = Vector2.zero;
+        animator.SetTrigger("Dash end");
         normalHitbox.enabled = true;
         dashHitbox.enabled = false;
-        spriteRenderer.sprite = normalSprite;
         rb.gravityScale = originalGravityScale;
         transform.localScale = originalHitboxSize;
         isDashing = false;
         player_Movement.canMove = true;
+        
+        
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
