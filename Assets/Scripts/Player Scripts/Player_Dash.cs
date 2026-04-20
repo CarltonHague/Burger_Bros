@@ -18,7 +18,7 @@ public class Player_Dash : MonoBehaviour
     private const int dashCost = 2;
     Player_Movement player_Movement;
     private bool dashCancelled = false;
-    private SpriteRenderer spriteRenderer;
+    [SerializeField] SpriteRenderer spriteRenderer;
     private BoxCollider2D normalHitbox;
     private CircleCollider2D dashHitbox;
     private Rigidbody2D rb;
@@ -31,7 +31,6 @@ public class Player_Dash : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         normalHitbox = GetComponent<BoxCollider2D>();
         dashHitbox = GetComponent<CircleCollider2D>();
         dashHitbox.radius = dashHitboxRadius;
