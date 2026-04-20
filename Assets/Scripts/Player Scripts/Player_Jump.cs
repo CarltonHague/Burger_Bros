@@ -10,13 +10,15 @@ public class Player_Jump : MonoBehaviour
     private float gravity = -9.81f;
     private Rigidbody2D rb;
     private Player_Dash dashScript;
-   
+    [SerializeField] Animator animator;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         // get the gravity value for calculating jump height
         gravity = Physics2D.gravity.y;
         gravity *= rb.gravityScale;
+        
     }
 
 
@@ -33,7 +35,9 @@ public class Player_Jump : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocityX, Mathf.Sqrt(baseJumpHeight * -2f * gravity));
             isJumping = true;
-            
+            animator.SetTrigger("Jump Start");
+            animator.SetBool("Is grounded", false);
+            animator.SetBool("Is in air", true);
         }
         if(context.canceled && !dashScript.getIsDashing)
         {
@@ -48,11 +52,23 @@ public class Player_Jump : MonoBehaviour
     }
     bool isGrounded()
     {
-        return rb.IsTouchingLayers(LayerMask.GetMask("Floor")) || rb.linearVelocityY == 0 || rb.IsTouchingLayers(LayerMask.GetMask("Enemy"));
+        bool Grounded = rb.IsTouchingLayers(LayerMask.GetMask("Floor")) || rb.linearVelocityY == 0 || rb.IsTouchingLayers(LayerMask.GetMask("Enemy"));
+        animator.SetBool("Is grounded", Grounded);
+        if (!Grounded)
+        {
+            
+            animator.SetBool("Is in air", true);
+        }
+        else 
+        {
+            
+            animator.SetBool("Is in air", false);
+        }
+        return Grounded;
     }
 
-    // Update is called once per frame
-    void Update()
+        // Update is called once per frame
+        void Update()
     {
     }
     private void FixedUpdate()

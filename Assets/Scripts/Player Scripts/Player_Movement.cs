@@ -11,7 +11,7 @@ public class Player_Movement : MonoBehaviour
     private Player_Jump Player_Jump;
     private bool isOnSlipperySurface = false;
     private int playerFacingDirection = 1;
-    private SpriteRenderer spriteRenderer;
+    [SerializeField] SpriteRenderer spriteRenderer;
 
 
     public bool canMove = true;
@@ -20,7 +20,6 @@ public class Player_Movement : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
         canMove = true;
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created

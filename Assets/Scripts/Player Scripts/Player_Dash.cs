@@ -12,7 +12,7 @@ public class Player_Dash : MonoBehaviour
     [SerializeField] Image dashUITracker;
     [SerializeField] Sprite[] dashUIArray;
    
-    private Animator animator;
+    [SerializeField] Animator animator;
     private const int maxDashStamina = 8;
     private int dashStamina = maxDashStamina;
     private const int dashCost = 2;
@@ -31,14 +31,14 @@ public class Player_Dash : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         normalHitbox = GetComponent<BoxCollider2D>();
         dashHitbox = GetComponent<CircleCollider2D>();
         dashHitbox.radius = dashHitboxRadius;
         dashHitbox.enabled = false;
         originalGravityScale = rb.gravityScale;
         originalHitboxSize = transform.localScale;
-        animator = GetComponent<Animator>();
+        
 
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
