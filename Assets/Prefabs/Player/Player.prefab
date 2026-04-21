@@ -571,6 +571,7 @@ MonoBehaviour:
   MaxSpeed: 10
   directionChangeControl: 0.1
   spriteRenderer: {fileID: 7171383980060583425}
+  animator: {fileID: 5637437865936485103}
   canMove: 0
 --- !u!114 &8170462624405330309
 MonoBehaviour:
@@ -680,6 +681,7 @@ MonoBehaviour:
   - {fileID: 3458104076446597537, guid: 895a8504648ced54a987b5b9574402d2, type: 3}
   - {fileID: 7335977447848403946, guid: 895a8504648ced54a987b5b9574402d2, type: 3}
   animator: {fileID: 5637437865936485103}
+  spriteRenderer: {fileID: 0}
 --- !u!232 &2862110831657170775
 DistanceJoint2D:
   m_ObjectHideFlags: 0

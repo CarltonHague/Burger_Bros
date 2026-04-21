@@ -12,6 +12,7 @@ public class Player_Movement : MonoBehaviour
     private bool isOnSlipperySurface = false;
     private int playerFacingDirection = 1;
     [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] Animator animator;
 
 
     public bool canMove = true;
@@ -33,7 +34,14 @@ public class Player_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (moveInput.x != 0 && Player_Jump.GetisGrounded()) 
+        {
+            animator.SetBool("Is walking", true);
+        }
+        else if(moveInput.x == 0 || !Player_Jump.GetisGrounded())
+        {
+            animator.SetBool("Is walking", false);
+        }
 
     }
     private void FixedUpdate()
