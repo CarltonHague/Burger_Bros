@@ -21,7 +21,10 @@ public class Player_Shoot : MonoBehaviour
     private Vector3 rotation;
     private float rotZ = 0f;
 
-   
+    //sound
+    public AudioClip SFX;
+    public float volume = 0.9f;
+
     void Awake()
     {
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
@@ -35,7 +38,10 @@ public class Player_Shoot : MonoBehaviour
         rotationPoint.transform.rotation = Quaternion.Euler(0, 0, rotZ);
     }
 
-
+    void playSound()
+    {
+        AudioSource.PlayClipAtPoint(SFX, transform.position, volume);
+    }
 
     private void reloadGun()
     {
@@ -54,6 +60,7 @@ public class Player_Shoot : MonoBehaviour
             amountOfBullets -= 1;
             Instantiate(projectilePrefab, LaunchOffset.position, LaunchOffset.transform.rotation);
             changeAmmoSprite();
+            playSound();
             onCooldown = true;
             Invoke(nameof(turnOffCooldown), shootCooldown);
         }

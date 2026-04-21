@@ -3,21 +3,23 @@ using UnityEngine;
 public class SwitchCheck : MonoBehaviour
 {
     BoxCollider2D playerHitbox;
+    private bool activated = false;
+    //sound
+    public AudioClip SFX;
+    public float volume = 0.9f;
+
     private void Awake()
     {
             playerHitbox = GetComponent<BoxCollider2D>();
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+
+    void playSound()
     {
-        
+        AudioSource.PlayClipAtPoint(SFX, transform.position, volume);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
             if(other.CompareTag("Switch"))
@@ -26,6 +28,11 @@ public class SwitchCheck : MonoBehaviour
                 if (switchScript != null)
                 {
                     switchScript.triggerSwitch(true);
+                    if (!activated)
+                    {
+                    activated = true;
+                    playSound();
+                    }
                 }
         }
     }

@@ -22,6 +22,9 @@ public class Player_Movement : MonoBehaviour
     //aligning shoulder
     public GameObject shoulderPoint;
     public float shoulderSkew;
+
+   
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();

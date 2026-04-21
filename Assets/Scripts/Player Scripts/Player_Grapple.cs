@@ -11,6 +11,12 @@ public class Player_Grapple : MonoBehaviour
     private Rigidbody2D playerRb;
     bool isGrappling = false;
     private Player_Movement movement;
+
+    //sound
+    public AudioClip SFX;
+    public float volume = 0.9f;
+
+
     private void Awake()
     {
         grappleJoint = GetComponent<DistanceJoint2D>();
@@ -32,6 +38,13 @@ public class Player_Grapple : MonoBehaviour
     {
         drawRope();
     }
+
+
+    void playSound()
+    {
+        AudioSource.PlayClipAtPoint(SFX, transform.position, volume);
+    }
+
     public void grapple(InputAction.CallbackContext context)
     {
         if (!context.performed)
@@ -53,7 +66,6 @@ public class Player_Grapple : MonoBehaviour
     }
     void startGrapple()
     {
-       
         GrapplePoint point = grappleDetector.closestGrapplePoint;
         if(point == null && grappleDetector.grapplePointsInRange.Count > 0)
         {
@@ -63,8 +75,8 @@ public class Player_Grapple : MonoBehaviour
         {
             return;
         }
-        
 
+        playSound();
         isGrappling = true;
         grappleJoint.enabled = true;
         movement.canMove = false;

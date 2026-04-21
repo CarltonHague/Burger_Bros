@@ -12,6 +12,10 @@ public class Player_Jump : MonoBehaviour
     private Player_Dash dashScript;
     [SerializeField] Animator animator;
 
+    //sound
+    public AudioClip jumpSFX;
+    public float volume = 0.9f;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -29,6 +33,13 @@ public class Player_Jump : MonoBehaviour
         dashScript = GetComponent<Player_Dash>();
         
     }
+
+
+    void playJumpSound()
+    {
+        AudioSource.PlayClipAtPoint(jumpSFX, transform.position, volume);
+    }
+
     public void jump(InputAction.CallbackContext context)
     {
         if (context.started && isGrounded() && !dashScript.getIsDashing)
@@ -38,6 +49,7 @@ public class Player_Jump : MonoBehaviour
             animator.SetBool("Jumping", true);
             animator.SetBool("Is grounded", false);
             animator.SetBool("Is in air", true);
+            playJumpSound();
         }
         if(context.canceled && !dashScript.getIsDashing)
         {

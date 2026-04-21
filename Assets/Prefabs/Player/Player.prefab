@@ -158,7 +158,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1090601283
   m_SortingLayer: 4
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: -9049513675290417454, guid: 0b0873546aae3b946ae6de7371d7b94a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -592,6 +592,8 @@ MonoBehaviour:
   heldJumpMultipler: 2.2
   terminalFallSpeed: 100
   animator: {fileID: 5637437865936485103}
+  jumpSFX: {fileID: 8300000, guid: 1213e1b46bc27114499201d7c4b6e2af, type: 3}
+  volume: 0.9
 --- !u!114 &6949044474674334104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -619,6 +621,8 @@ MonoBehaviour:
   - {fileID: 2141861189, guid: 5f206da962ae2f840b491f74933c69c8, type: 3}
   - {fileID: 4663278433569566765, guid: 5f206da962ae2f840b491f74933c69c8, type: 3}
   rotationPoint: {fileID: 5179323285993899927}
+  SFX: {fileID: 8300000, guid: d7e46d5f5a51f80418834be9b876275f, type: 3}
+  volume: 0.9
 --- !u!58 &4202380912431098066
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -684,6 +688,8 @@ MonoBehaviour:
   - {fileID: 7335977447848403946, guid: 895a8504648ced54a987b5b9574402d2, type: 3}
   animator: {fileID: 5637437865936485103}
   spriteRenderer: {fileID: 0}
+  SFX: {fileID: 0}
+  volume: 0.9
 --- !u!232 &2862110831657170775
 DistanceJoint2D:
   m_ObjectHideFlags: 0
@@ -829,6 +835,8 @@ MonoBehaviour:
   grappleDetector: {fileID: 3409347391161847009}
   grapplePullSpeed: 8
   grappleStopDistance: 1
+  SFX: {fileID: 0}
+  volume: 0.9
 --- !u!114 &4167014464281406223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1118,9 +1126,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1090601283
+  m_SortingLayer: 4
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 4334783836991956000, guid: 86ba8c7dd6808c14fad3e6a1fca919b1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

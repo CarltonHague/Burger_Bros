@@ -28,6 +28,11 @@ public class Player_Dash : MonoBehaviour
     private float dashCooldownTimer = 0f;
     private bool canDash => dashStamina >= dashCost;
     public bool getIsDashing => isDashing;
+
+    //sound
+    public AudioClip SFX;
+    public float volume = 0.9f;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -44,7 +49,6 @@ public class Player_Dash : MonoBehaviour
     void Start()
     {
         player_Movement = GetComponent<Player_Movement>();
-   
         changeUISprite();
     }
 
@@ -68,12 +72,20 @@ public class Player_Dash : MonoBehaviour
 
         }
     }
+
+
+    void playSound()
+    {
+        AudioSource.PlayClipAtPoint(SFX, transform.position, volume);
+    }
+
     public void dash(InputAction.CallbackContext context)
     {
         if (context.performed && canDash && !isDashing)
         {
             StartCoroutine(dash());
             dashStamina -= dashCost;
+            playSound();
             changeUISprite();
         }
     }
