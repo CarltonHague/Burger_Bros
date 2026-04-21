@@ -2,13 +2,14 @@ using UnityEngine;
 
 public class Mushroom : MonoBehaviour
 {
+    [SerializeField] private Animator animator;
     //other objects and prefabs
     public GameObject player;
     public GameObject centrePoint;
 
     //sprites
     public Sprite[] spriteStates;
-    private SpriteRenderer spriteRenderer;
+    [SerializeField] private SpriteRenderer spriteRenderer;
 
     //patroll
     public float speed = 1;
@@ -31,7 +32,7 @@ public class Mushroom : MonoBehaviour
 
     void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+       
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -50,10 +51,13 @@ public class Mushroom : MonoBehaviour
                 {
                     Invoke(nameof(block), blockCooldown);
                     blocking = true;
+                    animator.SetBool("Walking", false);
+                   
                 }
             }
             else if (distance < aggroDistance)   //want to be aggro
             {
+                animator.SetBool("Walking", true);
                 transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);//move enemy
             }
             else  //default  patrol
@@ -64,7 +68,7 @@ public class Mushroom : MonoBehaviour
                 }
                 transform.position += patrolDirection * speed * Time.deltaTime;  //move
                 posOnPatrolRange += patrolDirection.x * speed * Time.deltaTime;  //keep track of relative to range pos
-
+                animator.SetBool("Walking", true);
             }
         }
     }
@@ -72,6 +76,8 @@ public class Mushroom : MonoBehaviour
     private void block()
     {
         blocking = true;
+        animator.SetBool("Walking", false);
+        animator.SetBool("Blocking", true);
         if (player.transform.position.x < transform.position.x) //if player on left
         {
             //flip sprite left
@@ -92,6 +98,7 @@ public class Mushroom : MonoBehaviour
     private void endBlock()
     {
         blocking = false;
+        animator.SetBool("Blocking", false);
         spriteRenderer.sprite = spriteStates[0]; //change sprite back
         spriteRenderer.flipX = false;
         centrePoint.transform.eulerAngles = new Vector3(0, 0, 0); //rotate centre back

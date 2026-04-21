@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Onion : MonoBehaviour
 {
+    
+    [SerializeField] private SpriteRenderer spriteRenderer;
     //other objects and prefabs
     public GameObject player;
 
@@ -24,6 +26,7 @@ public class Onion : MonoBehaviour
         if (distance < aggroDistance)   //want to be aggro
         {
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);//move enemy
+                
         }
         else   //default  patrol
         {
@@ -33,7 +36,15 @@ public class Onion : MonoBehaviour
             }
             transform.position += patrolDirection * speed * Time.deltaTime;  //move
             posOnPatrolRange += patrolDirection.x * speed * Time.deltaTime;  //keep track of relative to range pos
-
+            
+        }
+        if (patrolDirection.x > 0)  //flip sprite based on direction
+        {
+            spriteRenderer.flipX = true;
+        }
+        else
+        {
+            spriteRenderer.flipX = false;
         }
     }
 

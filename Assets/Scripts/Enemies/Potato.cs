@@ -8,7 +8,8 @@ public class Potato : MonoBehaviour
 
     //sprites
     public Sprite[] spriteStates;
-    private SpriteRenderer spriteRenderer;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Animator animator;
 
     //patroll
     public float speed;
@@ -32,7 +33,7 @@ public class Potato : MonoBehaviour
 
     void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+       
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -48,11 +49,22 @@ public class Potato : MonoBehaviour
             distance = Vector2.Distance(transform.position, player.transform.position);
             if (distance < attackDistance)    //want to attack
             {
+                animator.SetBool("Walking", false);
                 Invoke(nameof(attack), attackCooldown);
                 attacking = true;
             }
             else if (distance < aggroDistance)   //want to be aggro
             {
+                animator.SetBool("Walking", true);
+                Vector2 direction = new Vector2(player.transform.position.x - transform.position.x, player.transform.position.y - transform.position.y);
+                if (direction.x > 0)  //flip sprite based on direction
+                {
+                    spriteRenderer.flipX = false;
+                }
+                else
+                {
+                    spriteRenderer.flipX = true;
+                }
                 transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);//move enemy
             }
             else  //default  patrol
@@ -61,15 +73,26 @@ public class Potato : MonoBehaviour
                 {
                     patrolDirection.x *= -1;  //flip direvction
                 }
+                animator.SetBool("Walking", true);
                 transform.position += patrolDirection * speed * Time.deltaTime;  //move
                 posOnPatrolRange += patrolDirection.x * speed * Time.deltaTime;  //keep track of relative to range pos
+                if (patrolDirection.x > 0)  //flip sprite based on direction
+                {
+                    spriteRenderer.flipX = false;
+                }
+                else
+                {
+                    spriteRenderer.flipX = true;
+                }
 
             }
+            
         }
     }
 
     private void attack()
     {
+        animator.SetBool("Spike Up", true);
         attacking = true;
         spikes.SetActive(attacking);
         spriteRenderer.sprite = spriteStates[1];
@@ -77,6 +100,7 @@ public class Potato : MonoBehaviour
     }
     private void endAttack()
     {
+        animator.SetBool("Spike Up", false);
         attacking = false;
         spriteRenderer.sprite = spriteStates[0];
         spikes.SetActive(attacking);

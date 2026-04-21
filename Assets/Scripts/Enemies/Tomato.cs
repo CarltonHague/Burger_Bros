@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Tomato : MonoBehaviour
 {
+    [SerializeField] private Animator animator;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     //other objects and prefabs
     public GameObject player;
     public GameObject shootPoint;
@@ -33,6 +35,7 @@ public class Tomato : MonoBehaviour
         distance = Vector2.Distance(transform.position, player.transform.position); //calculate distance from player
         if (distance < shootingDistance)    //want to shoot
         {
+            animator.SetBool("Walking", false);
             //calculate aim angle
             direction = player.transform.position - transform.position;
             direction.Normalize();
@@ -42,6 +45,7 @@ public class Tomato : MonoBehaviour
         }
         else if (distance < aggroDistance)   //want to be aggro
         {
+            animator.SetBool("Walking", true);
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);//move enemy
         }
         else   //default  patrol
@@ -50,9 +54,18 @@ public class Tomato : MonoBehaviour
             {
                 patrolDirection.x *= -1;  //flip direvction
             }
+            animator.SetBool("Walking", true);
             transform.position += patrolDirection * speed * Time.deltaTime;  //move
             posOnPatrolRange += patrolDirection.x * speed * Time.deltaTime;  //keep track of relative to range pos
 
+        }
+        if(direction.x > 0)  //flip sprite based on direction
+        {
+            spriteRenderer.flipX = false;
+        }
+        else
+        {
+            spriteRenderer.flipX = true;
         }
     }
 
@@ -61,6 +74,7 @@ public class Tomato : MonoBehaviour
     {
         if (cooldown > secBetweenShots)
         {
+           
             cooldown = 0;
             Instantiate(bulletPrefab, shootPoint.transform.position, shootPoint.transform.rotation);
         }
