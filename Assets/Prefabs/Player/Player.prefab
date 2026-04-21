@@ -573,6 +573,8 @@ MonoBehaviour:
   spriteRenderer: {fileID: 7171383980060583425}
   animator: {fileID: 5637437865936485103}
   canMove: 0
+  shoulderPoint: {fileID: 5179323285993899927}
+  shoulderSkew: 0.11
 --- !u!114 &8170462624405330309
 MonoBehaviour:
   m_ObjectHideFlags: 0

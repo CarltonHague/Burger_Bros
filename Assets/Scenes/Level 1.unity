@@ -3041,6 +3041,10 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: -254.47038
       objectReference: {fileID: 0}
+    - target: {fileID: 3229304778277561858, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
+      propertyPath: shoulderSkew
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 4167014464281406223, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
       propertyPath: startOfLevel
       value: 

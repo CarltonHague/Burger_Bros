@@ -18,6 +18,10 @@ public class Player_Movement : MonoBehaviour
     public bool canMove = true;
     public int getPlayerFacingDirection => playerFacingDirection;
     public Vector2 getMoveInput => moveInput;
+
+    //aligning shoulder
+    public GameObject shoulderPoint;
+    public float shoulderSkew;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -27,8 +31,6 @@ public class Player_Movement : MonoBehaviour
     void Start()
     {
         Player_Jump = GetComponent<Player_Jump>();
-
-
     }
 
     // Update is called once per frame
@@ -57,9 +59,6 @@ public class Player_Movement : MonoBehaviour
             float targetSpeed = moveInput.x * speed;
             targetSpeed = Mathf.Clamp(targetSpeed, -MaxSpeed, MaxSpeed);
             rb.linearVelocityX = targetSpeed;
-
-
-
         }
         if (!Player_Jump.isInAir() && isOnSlipperySurface)
         {
@@ -116,10 +115,12 @@ public class Player_Movement : MonoBehaviour
         if (playerFacingDirection > 0)
         {
             spriteRenderer.flipX = false;
+            shoulderPoint.transform.localPosition = new Vector3 (-shoulderSkew, 0, 0);
         }
         else
         {
             spriteRenderer.flipX = true;
+            shoulderPoint.transform.localPosition = new Vector3(shoulderSkew, 0, 0);
         }
     }
 
