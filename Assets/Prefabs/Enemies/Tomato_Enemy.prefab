@@ -100,8 +100,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1090601283
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6826982968626422964, guid: cdfc8ba629948b6468fff508098f5656, type: 3}
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 1565655348977129276}
   - component: {fileID: 3192204929061031674}
   - component: {fileID: 8746256858041561497}
-  - component: {fileID: 1875944823327220869}
+  - component: {fileID: 1656229639190580754}
   m_Layer: 12
   m_Name: Tomato_Enemy
   m_TagString: Enemy
@@ -232,8 +232,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &1875944823327220869
-BoxCollider2D:
+--- !u!70 &1656229639190580754
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -266,15 +266,6 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.3454998, y: 2.5176015}
-    newSize: {x: 3.9091666, y: 4.1960025}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 2.3454998, y: 2.5176015}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.05, y: -0.18}
+  m_Size: {x: 2.6, y: 1.9}
+  m_Direction: 1
