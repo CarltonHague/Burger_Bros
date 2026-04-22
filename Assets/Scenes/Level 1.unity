@@ -3030,10 +3030,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2855095275239660900, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
-      propertyPath: SFX
-      value: 
-      objectReference: {fileID: 8300000, guid: 6c8a94894a2b9054d9f82f49e7fe0fa7, type: 3}
-    - target: {fileID: 2855095275239660900, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
       propertyPath: dashUITracker
       value: 
       objectReference: {fileID: 383121701}
