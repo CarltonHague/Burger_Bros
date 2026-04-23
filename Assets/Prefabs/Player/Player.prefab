@@ -616,12 +616,12 @@ MonoBehaviour:
   shootCooldown: 0.2
   ammoUIDisplay: {fileID: 0}
   ammoSpriteArray:
-  - {fileID: 145655524, guid: 5f206da962ae2f840b491f74933c69c8, type: 3}
-  - {fileID: 1108572123, guid: 5f206da962ae2f840b491f74933c69c8, type: 3}
-  - {fileID: 1159755268, guid: 5f206da962ae2f840b491f74933c69c8, type: 3}
-  - {fileID: 1362279945, guid: 5f206da962ae2f840b491f74933c69c8, type: 3}
-  - {fileID: 2141861189, guid: 5f206da962ae2f840b491f74933c69c8, type: 3}
-  - {fileID: 4663278433569566765, guid: 5f206da962ae2f840b491f74933c69c8, type: 3}
+  - {fileID: 5430012291618214086, guid: 4bd9fdb75009cae4da1155371c9feae7, type: 3}
+  - {fileID: -7479080532683635329, guid: 84040b11ba8874742a1268ef8df584c4, type: 3}
+  - {fileID: 1936879772074317817, guid: f7060fdc466560148b74f03779d9ae77, type: 3}
+  - {fileID: 8225758857790683766, guid: 373207c0af3681c46b1be611ce9fbe93, type: 3}
+  - {fileID: -3172140625205834107, guid: 97ddaf1b2080e20419560e9fb5b1d346, type: 3}
+  - {fileID: 5947278042832330410, guid: 3b0e8c973aaea8e4ab4e9bf9c6ec5eec, type: 3}
   rotationPoint: {fileID: 5179323285993899927}
   SFX: {fileID: 8300000, guid: d7e46d5f5a51f80418834be9b876275f, type: 3}
   volume: 0.9
@@ -679,15 +679,15 @@ MonoBehaviour:
   dashHitboxRadius: 0.3
   dashUITracker: {fileID: 0}
   dashUIArray:
-  - {fileID: 1428184107, guid: 895a8504648ced54a987b5b9574402d2, type: 3}
-  - {fileID: 4199945053758806347, guid: 895a8504648ced54a987b5b9574402d2, type: 3}
-  - {fileID: -8975386023217574741, guid: 895a8504648ced54a987b5b9574402d2, type: 3}
-  - {fileID: -3686962934808186811, guid: 895a8504648ced54a987b5b9574402d2, type: 3}
-  - {fileID: 6144381497578168920, guid: 895a8504648ced54a987b5b9574402d2, type: 3}
-  - {fileID: -224008003532068586, guid: 895a8504648ced54a987b5b9574402d2, type: 3}
-  - {fileID: 7459919997213556421, guid: 895a8504648ced54a987b5b9574402d2, type: 3}
-  - {fileID: 3458104076446597537, guid: 895a8504648ced54a987b5b9574402d2, type: 3}
-  - {fileID: 7335977447848403946, guid: 895a8504648ced54a987b5b9574402d2, type: 3}
+  - {fileID: 3877363292067126448, guid: 81a75cc841a372a43b9f0bc8688f133b, type: 3}
+  - {fileID: 3877363292067126448, guid: 81a75cc841a372a43b9f0bc8688f133b, type: 3}
+  - {fileID: -6072538630434162108, guid: d6ab41d743fd7164984e574acbef1af3, type: 3}
+  - {fileID: -6072538630434162108, guid: d6ab41d743fd7164984e574acbef1af3, type: 3}
+  - {fileID: -261217719297874142, guid: 31a12fdc65bf27c42a44ae5c195ef2eb, type: 3}
+  - {fileID: -261217719297874142, guid: 31a12fdc65bf27c42a44ae5c195ef2eb, type: 3}
+  - {fileID: 7800448960281076356, guid: bfacc16142beac14aa6e8f733798730c, type: 3}
+  - {fileID: 7800448960281076356, guid: bfacc16142beac14aa6e8f733798730c, type: 3}
+  - {fileID: 3813146422622770507, guid: a77a61824285a1b498b5a0cf822c5722, type: 3}
   animator: {fileID: 5637437865936485103}
   spriteRenderer: {fileID: 0}
   SFX: {fileID: 8300000, guid: 6c8a94894a2b9054d9f82f49e7fe0fa7, type: 3}
@@ -771,8 +771,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 1
+        time: 0.008213043
+        value: 0.6155853
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -855,10 +855,10 @@ MonoBehaviour:
   maxHealth: 3
   heartUIDisplay: {fileID: 0}
   heartSprites:
-  - {fileID: 937881118, guid: ce7d59091e3cc04459465e1e41b01f9f, type: 3}
-  - {fileID: -1527671966, guid: ce7d59091e3cc04459465e1e41b01f9f, type: 3}
-  - {fileID: 740823311, guid: ce7d59091e3cc04459465e1e41b01f9f, type: 3}
-  - {fileID: 1491335115882531572, guid: ce7d59091e3cc04459465e1e41b01f9f, type: 3}
+  - {fileID: -7388644005603167913, guid: 77b425f837e0c404ab529da94af8e814, type: 3}
+  - {fileID: -2222103351588086253, guid: 77b425f837e0c404ab529da94af8e814, type: 3}
+  - {fileID: -899931925995044808, guid: 77b425f837e0c404ab529da94af8e814, type: 3}
+  - {fileID: 9087237326730622042, guid: 77b425f837e0c404ab529da94af8e814, type: 3}
   startOfLevel: {fileID: 0}
   lastCheckpoint: {fileID: 0}
   invulnerabilityDuration: 0.2

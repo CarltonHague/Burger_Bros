@@ -4,18 +4,27 @@ public class BouncePad : MonoBehaviour
 {
     [SerializeField] private float bounceForce = 10f;
     Animator animator;
+    //sound
+    public AudioClip SFX;
+    public float volume = 0.9f;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
         animator.speed = 1.5f;
     }
 
+    void playSound()
+    {
+        AudioSource.PlayClipAtPoint(SFX, transform.position, volume);
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //if the player collides with the bounce pad
         if (collision.CompareTag("Player"))
         {
+            playSound();
             Rigidbody2D playerRb = collision.GetComponent<Rigidbody2D>();
             if (playerRb != null)
             {

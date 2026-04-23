@@ -153,6 +153,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BouncePad
   bounceForce: 20
+  SFX: {fileID: 8300000, guid: 1213e1b46bc27114499201d7c4b6e2af, type: 3}
+  volume: 0.9
 --- !u!95 &6705427050791344016
 Animator:
   serializedVersion: 7

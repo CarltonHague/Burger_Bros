@@ -12,7 +12,6 @@ public class Switch : MonoBehaviour
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-       
         spriteRenderer.sprite = unpressedSprite;
     }
 
