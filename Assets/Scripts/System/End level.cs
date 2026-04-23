@@ -22,10 +22,6 @@ public class Endlevel : MonoBehaviour
             }
         }
     }
-
-
-
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         fading = true;

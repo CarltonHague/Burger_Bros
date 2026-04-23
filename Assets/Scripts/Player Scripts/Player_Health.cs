@@ -18,6 +18,10 @@ public class Player_Health : MonoBehaviour
     private bool isInvulnerable = false;
     [SerializeField] MovingDeathZone movingDeathZone;
 
+    //death screen
+    //[SerializeField] private Image cutSceneLoader;
+    //[SerializeField] private float fadeTime;
+
 
     private void Awake()
     {
