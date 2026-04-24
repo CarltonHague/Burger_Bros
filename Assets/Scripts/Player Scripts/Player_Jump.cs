@@ -46,9 +46,7 @@ public class Player_Jump : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocityX, Mathf.Sqrt(baseJumpHeight * -2f * gravity));
             isJumping = true;
-            animator.SetBool("Jumping", true);
-            animator.SetBool("Is grounded", false);
-            animator.SetBool("Is in air", true);
+            animator.SetTrigger("Jump Start");
             playJumpSound();
         }
         if(context.canceled && !dashScript.getIsDashing)
@@ -76,40 +74,26 @@ public class Player_Jump : MonoBehaviour
     }
     bool isGrounded()
     {
-        bool Grounded = rb.IsTouchingLayers(LayerMask.GetMask("Floor")) || rb.linearVelocityY == 0 || rb.IsTouchingLayers(LayerMask.GetMask("Enemy")) || rb.IsTouchingLayers(LayerMask.GetMask("Slippery"));
-        if(Grounded)
-        {
-            animator.SetBool("Is grounded", Grounded);
-        }
-        
-        
+        bool Grounded = rb.IsTouchingLayers(LayerMask.GetMask("Floor")) ||  rb.IsTouchingLayers(LayerMask.GetMask("Enemy")) || rb.IsTouchingLayers(LayerMask.GetMask("Slippery")) || rb.IsTouchingLayers(LayerMask.GetMask("Platform"));
+       
+      
+     
         return Grounded;
     }
 
         // Update is called once per frame
         void Update()
-    {
-        if (isInAir())
-        {
-
-            animator.SetBool("Is in air", true);
-
-        }
-        else
-        {
-
-            animator.SetBool("Is in air", false);
-        }
-        if(isJumping && rb.linearVelocityY <= 0)
-        {
-            isJumping = false;
-            animator.SetBool("Jumping", false);
-        }
-    }
+       {
+        bool groundCheck = isGrounded();
+       
+        
+        animator.SetBool("Is in air", !groundCheck);
+        animator.SetBool("Is grounded", groundCheck);
+       }
     private void FixedUpdate()
     {
         // if the player is falling
-        if (rb.linearVelocityY < 0 && !dashScript && !dashScript.getIsDashing)
+        if (rb.linearVelocityY < 0 && !dashScript.getIsDashing)
         {
             // calculate the new velocity by applying the fall speed multiplier to the gravity and adding it to the current velocity
             Vector2 currentVelocity = rb.linearVelocity;
@@ -118,8 +102,7 @@ public class Player_Jump : MonoBehaviour
             currentVelocity.y = Mathf.Max(currentVelocity.y, -terminalFallSpeed);
             // set the new velocity
             rb.linearVelocity = currentVelocity;
-            animator.SetBool("Is in air", true);
-            animator.SetBool("Jumping", false);
+            
         }
 
 

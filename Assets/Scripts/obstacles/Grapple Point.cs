@@ -4,6 +4,7 @@ public class GrapplePoint : MonoBehaviour
 {
     [SerializeField] Sprite noGrappleSprite;
     [SerializeField] Sprite grappleSprite;
+    
 
     private SpriteRenderer spriteRenderer;
     

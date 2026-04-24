@@ -143,6 +143,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2111977620058499479, guid: add8e679d6b58c04aa05fe463bf2203d, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4011754043288711236, guid: add8e679d6b58c04aa05fe463bf2203d, type: 3}
       propertyPath: m_Name
       value: Block (6)
@@ -1230,7 +1234,7 @@ Transform:
   m_GameObject: {fileID: 277677161}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -509.10855, y: -257.3803, z: -4.7685847}
+  m_LocalPosition: {x: -511.7248, y: -257.38028, z: -4.7685847}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2497,6 +2501,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.5135135
       objectReference: {fileID: 0}
+    - target: {fileID: 2111977620058499479, guid: add8e679d6b58c04aa05fe463bf2203d, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4011754043288711236, guid: add8e679d6b58c04aa05fe463bf2203d, type: 3}
       propertyPath: m_Name
       value: Block (8)
@@ -2656,6 +2664,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 262638816564385304, guid: e796ac20041e9b241bc0cd944d8ed0b8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04859258
+      objectReference: {fileID: 0}
+    - target: {fileID: 262638816564385304, guid: e796ac20041e9b241bc0cd944d8ed0b8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.010358829
+      objectReference: {fileID: 0}
+    - target: {fileID: 262638816564385304, guid: e796ac20041e9b241bc0cd944d8ed0b8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 262638816564385304, guid: e796ac20041e9b241bc0cd944d8ed0b8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.467594
+      objectReference: {fileID: 0}
     - target: {fileID: 4851089228111792224, guid: e796ac20041e9b241bc0cd944d8ed0b8, type: 3}
       propertyPath: m_LocalScale.x
       value: 91.6257
@@ -2707,6 +2731,14 @@ PrefabInstance:
     - target: {fileID: 5825942441536170101, guid: e796ac20041e9b241bc0cd944d8ed0b8, type: 3}
       propertyPath: m_Name
       value: Moving deathwall
+      objectReference: {fileID: 0}
+    - target: {fileID: 7487634333477765119, guid: e796ac20041e9b241bc0cd944d8ed0b8, type: 3}
+      propertyPath: m_SortingLayer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7487634333477765119, guid: e796ac20041e9b241bc0cd944d8ed0b8, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1568338477
       objectReference: {fileID: 0}
     - target: {fileID: 8695189628423137925, guid: e796ac20041e9b241bc0cd944d8ed0b8, type: 3}
       propertyPath: m_Color.b
@@ -4018,6 +4050,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2111977620058499479, guid: add8e679d6b58c04aa05fe463bf2203d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4011754043288711236, guid: add8e679d6b58c04aa05fe463bf2203d, type: 3}
       propertyPath: m_Name
       value: Block (4)
@@ -4498,6 +4534,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall (09)
       objectReference: {fileID: 0}
+    - target: {fileID: 5333127646158409737, guid: a3967c07c075ce841a91aa1e239d969b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6206832318363201836, guid: a3967c07c075ce841a91aa1e239d969b, type: 3}
       propertyPath: m_Size.x
       value: 2.2162163
@@ -4594,6 +4634,10 @@ PrefabInstance:
     - target: {fileID: 103382927782234290, guid: add8e679d6b58c04aa05fe463bf2203d, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2111977620058499479, guid: add8e679d6b58c04aa05fe463bf2203d, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4011754043288711236, guid: add8e679d6b58c04aa05fe463bf2203d, type: 3}
       propertyPath: m_Name
@@ -4973,7 +5017,7 @@ GameObject:
   - component: {fileID: 1153072220}
   - component: {fileID: 1153072219}
   - component: {fileID: 1153072218}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: green box_0
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -5616,7 +5660,7 @@ GameObject:
   - component: {fileID: 1275367956}
   - component: {fileID: 1275367955}
   - component: {fileID: 1275367954}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: green box_0 (1)
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -6275,6 +6319,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2111977620058499479, guid: add8e679d6b58c04aa05fe463bf2203d, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4011754043288711236, guid: add8e679d6b58c04aa05fe463bf2203d, type: 3}
       propertyPath: m_Name
       value: Block (10)
@@ -6826,7 +6874,7 @@ GameObject:
   - component: {fileID: 1590128144}
   - component: {fileID: 1590128143}
   - component: {fileID: 1590128142}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: green box_0 (3)
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -7611,7 +7659,7 @@ GameObject:
   - component: {fileID: 1681924826}
   - component: {fileID: 1681924825}
   - component: {fileID: 1681924824}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: green box_0 (2)
   m_TagString: Platform
   m_Icon: {fileID: 0}
