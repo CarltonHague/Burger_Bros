@@ -3,10 +3,17 @@ using UnityEngine.UI;
 public class Player_Coins : MonoBehaviour
 {
     public Text coinText;
-    private int coins = 0;
+    public static int coins = 0;
 
     private const float delay = 0.001f;
     private bool currentlyCollecting = false;
+
+    void Start()
+    {
+        coins = StaticCoinData.coinAmount;    //keep old coins
+        coinText.text = ": " + coins.ToString();  //update ui
+    }
+
 
     private void OnTriggerExit2D(Collider2D other)
     {

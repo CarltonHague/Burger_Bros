@@ -18,6 +18,11 @@ public class Endlevel : MonoBehaviour
 
             if (currentColor.a >= 1f)
             {
+                //keep coin amount
+                int amountOfCoins = Player_Coins.coins;  
+                StaticCoinData.coinAmount += amountOfCoins;
+
+                //load new scene
                 UnityEngine.SceneManagement.SceneManager.LoadScene(SceneYouWantToLoad);
             }
         }
