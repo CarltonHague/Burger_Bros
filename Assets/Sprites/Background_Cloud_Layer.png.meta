@@ -1,0 +1,949 @@
+fileFormatVersion: 2
+guid: 0ce56b2150c2a0f4b98f4b6917e27c56
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3191392527938125233
+    second: Background_Cloud_Layer_0
+  - first:
+      213: -1063837642460238058
+    second: Background_Cloud_Layer_1
+  - first:
+      213: 2872361799239754986
+    second: Background_Cloud_Layer_2
+  - first:
+      213: 3597673274422033403
+    second: Background_Cloud_Layer_3
+  - first:
+      213: 1250819017305633167
+    second: Background_Cloud_Layer_4
+  - first:
+      213: 2462231009471837434
+    second: Background_Cloud_Layer_5
+  - first:
+      213: 60906907932145596
+    second: Background_Cloud_Layer_6
+  - first:
+      213: 3270984809484539924
+    second: Background_Cloud_Layer_7
+  - first:
+      213: 241101689891042013
+    second: Background_Cloud_Layer_8
+  - first:
+      213: 6864313327370408659
+    second: Background_Cloud_Layer_9
+  - first:
+      213: -2604775192713239732
+    second: Background_Cloud_Layer_10
+  - first:
+      213: -3627863716968617960
+    second: Background_Cloud_Layer_11
+  - first:
+      213: -4717870846580965048
+    second: Background_Cloud_Layer_12
+  - first:
+      213: 3904948341894175082
+    second: Background_Cloud_Layer_13
+  - first:
+      213: -3766167743020860869
+    second: Background_Cloud_Layer_14
+  - first:
+      213: 7189296659582263294
+    second: Background_Cloud_Layer_15
+  - first:
+      213: 7866825002530126848
+    second: Background_Cloud_Layer_16
+  - first:
+      213: -533544088687420488
+    second: Background_Cloud_Layer_17
+  - first:
+      213: 8433106475862520355
+    second: Background_Cloud_Layer_18
+  - first:
+      213: -175285258870777687
+    second: Background_Cloud_Layer_19
+  - first:
+      213: -3370215765482613515
+    second: Background_Cloud_Layer_20
+  - first:
+      213: -4090043604283629752
+    second: Background_Cloud_Layer_21
+  - first:
+      213: -1859319230655426885
+    second: Background_Cloud_Layer_22
+  - first:
+      213: 7935564455814523382
+    second: Background_Cloud_Layer_23
+  - first:
+      213: 3211966618112326416
+    second: Background_Cloud_Layer_24
+  - first:
+      213: -3522110688981968581
+    second: Background_Cloud_Layer_25
+  - first:
+      213: -1567578632963721706
+    second: Background_Cloud_Layer_26
+  - first:
+      213: 6783115807554242550
+    second: Background_Cloud_Layer_27
+  - first:
+      213: -5603156131378126505
+    second: Background_Cloud_Layer_28
+  - first:
+      213: 7272595992334824034
+    second: Background_Cloud_Layer_29
+  - first:
+      213: 4477972928194690540
+    second: Background_Cloud_Layer_30
+  - first:
+      213: -669439958887166069
+    second: Background_Cloud_Layer_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Background_Cloud_Layer_0
+      rect:
+        serializedVersion: 2
+        x: 5667
+        y: 5547
+        width: 3609
+        height: 1240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bd769e689a1a4c20800000000000000
+      internalID: 3191392527938125233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Cloud_Layer_1
+      rect:
+        serializedVersion: 2
+        x: 9275
+        y: 5768
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61fe776fc4d7c31f0800000000000000
+      internalID: -1063837642460238058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Cloud_Layer_2
+      rect:
+        serializedVersion: 2
+        x: 5662
+        y: 5738
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae4661686ddacd720800000000000000
+      internalID: 2872361799239754986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Cloud_Layer_3
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 4502
+        width: 2536
+        height: 911
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfb77d328c08de130800000000000000
+      internalID: 3597673274422033403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Cloud_Layer_4
+      rect:
+        serializedVersion: 2
+        x: 3285
+        y: 5411
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f813ec4e44dcb5110800000000000000
+      internalID: 1250819017305633167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Cloud_Layer_5
+      rect:
+        serializedVersion: 2
+        x: 3308
+        y: 5412
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af43582ce0a9b2220800000000000000
+      internalID: 2462231009471837434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Cloud_Layer_6
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 4792
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb7b9a3928268d000800000000000000
+      internalID: 60906907932145596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Cloud_Layer_7
+      rect:
+        serializedVersion: 2
+        x: 4082
+        y: 4806
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41856039a5fd46d20800000000000000
+      internalID: 3270984809484539924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Cloud_Layer_8
+      rect:
+        serializedVersion: 2
+        x: 4064
+        y: 4789
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd2b3b4a5b0985300800000000000000
+      internalID: 241101689891042013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Cloud_Layer_9
+      rect:
+        serializedVersion: 2
+        x: 4064
+        y: 4749
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d294e04a90f24f50800000000000000
+      internalID: 6864313327370408659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Cloud_Layer_10
+      rect:
+        serializedVersion: 2
+        x: 4055
+        y: 4729
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c43e39e43caf9dbd0800000000000000
+      internalID: -2604775192713239732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Cloud_Layer_11
+      rect:
+        serializedVersion: 2
+        x: 2049
+        y: 4492
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 818ae80bb2d37adc0800000000000000
+      internalID: -3627863716968617960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Cloud_Layer_12
+      rect:
+        serializedVersion: 2
+        x: 2853
+        y: 4497
+        width: 39
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 841ce5d1671c68eb0800000000000000
+      internalID: -4717870846580965048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Cloud_Layer_13
+      rect:
+        serializedVersion: 2
+        x: 4133
+        y: 2990
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a695ad0e3d9213630800000000000000
+      internalID: 3904948341894175082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Cloud_Layer_14
+      rect:
+        serializedVersion: 2
+        x: 4155
+        y: 2977
+        width: 40
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3af4b84462ebbbc0800000000000000
+      internalID: -3766167743020860869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Cloud_Layer_15
+      rect:
+        serializedVersion: 2
+        x: 4174
+        y: 2601
+        width: 2795
+        height: 1103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eff9d4ba83385c360800000000000000
+      internalID: 7189296659582263294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Cloud_Layer_16
+      rect:
+        serializedVersion: 2
+        x: 4115
+        y: 2891
+        width: 75
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00c38f9d8a39c2d60800000000000000
+      internalID: 7866825002530126848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Cloud_Layer_17
+      rect:
+        serializedVersion: 2
+        x: 4119
+        y: 2887
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bbd6c96a787898f0800000000000000
+      internalID: -533544088687420488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Cloud_Layer_18
+      rect:
+        serializedVersion: 2
+        x: 4145
+        y: 2886
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 322f4d6c8a9680570800000000000000
+      internalID: 8433106475862520355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Cloud_Layer_19
+      rect:
+        serializedVersion: 2
+        x: 8438
+        y: 1998
+        width: 1682
+        height: 936
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a815aa5cf2419df0800000000000000
+      internalID: -175285258870777687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Cloud_Layer_20
+      rect:
+        serializedVersion: 2
+        x: 4137
+        y: 2862
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f4dcf11e969a31d0800000000000000
+      internalID: -3370215765482613515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Cloud_Layer_21
+      rect:
+        serializedVersion: 2
+        x: 4173
+        y: 2800
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84fd0da030f3d37c0800000000000000
+      internalID: -4090043604283629752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Cloud_Layer_22
+      rect:
+        serializedVersion: 2
+        x: 10119
+        y: 2691
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbe0bb4c20f5236e0800000000000000
+      internalID: -1859319230655426885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Cloud_Layer_23
+      rect:
+        serializedVersion: 2
+        x: 10126
+        y: 2664
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f96a0104d9c02e60800000000000000
+      internalID: 7935564455814523382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Cloud_Layer_24
+      rect:
+        serializedVersion: 2
+        x: 10108
+        y: 2636
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01b7ff61f92339c20800000000000000
+      internalID: 3211966618112326416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Cloud_Layer_25
+      rect:
+        serializedVersion: 2
+        x: 5048
+        y: 2598
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b399f934df2fe1fc0800000000000000
+      internalID: -3522110688981968581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Cloud_Layer_26
+      rect:
+        serializedVersion: 2
+        x: 5028
+        y: 2585
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61674b8e987de3ae0800000000000000
+      internalID: -1567578632963721706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Cloud_Layer_27
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 834
+        width: 3084
+        height: 1599
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f78b9373e7722e50800000000000000
+      internalID: 6783115807554242550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Cloud_Layer_28
+      rect:
+        serializedVersion: 2
+        x: 2835
+        y: 2424
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 751a7207f279d32b0800000000000000
+      internalID: -5603156131378126505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Cloud_Layer_29
+      rect:
+        serializedVersion: 2
+        x: 9220
+        y: 1995
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 262fb0ee5837de460800000000000000
+      internalID: 7272595992334824034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Cloud_Layer_30
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 1641
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ced3cd227a4f42e30800000000000000
+      internalID: 4477972928194690540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Cloud_Layer_31
+      rect:
+        serializedVersion: 2
+        x: 2456
+        y: 828
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8f041c77eba5b6f0800000000000000
+      internalID: -669439958887166069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Background_Cloud_Layer_0: 3191392527938125233
+      Background_Cloud_Layer_1: -1063837642460238058
+      Background_Cloud_Layer_10: -2604775192713239732
+      Background_Cloud_Layer_11: -3627863716968617960
+      Background_Cloud_Layer_12: -4717870846580965048
+      Background_Cloud_Layer_13: 3904948341894175082
+      Background_Cloud_Layer_14: -3766167743020860869
+      Background_Cloud_Layer_15: 7189296659582263294
+      Background_Cloud_Layer_16: 7866825002530126848
+      Background_Cloud_Layer_17: -533544088687420488
+      Background_Cloud_Layer_18: 8433106475862520355
+      Background_Cloud_Layer_19: -175285258870777687
+      Background_Cloud_Layer_2: 2872361799239754986
+      Background_Cloud_Layer_20: -3370215765482613515
+      Background_Cloud_Layer_21: -4090043604283629752
+      Background_Cloud_Layer_22: -1859319230655426885
+      Background_Cloud_Layer_23: 7935564455814523382
+      Background_Cloud_Layer_24: 3211966618112326416
+      Background_Cloud_Layer_25: -3522110688981968581
+      Background_Cloud_Layer_26: -1567578632963721706
+      Background_Cloud_Layer_27: 6783115807554242550
+      Background_Cloud_Layer_28: -5603156131378126505
+      Background_Cloud_Layer_29: 7272595992334824034
+      Background_Cloud_Layer_3: 3597673274422033403
+      Background_Cloud_Layer_30: 4477972928194690540
+      Background_Cloud_Layer_31: -669439958887166069
+      Background_Cloud_Layer_4: 1250819017305633167
+      Background_Cloud_Layer_5: 2462231009471837434
+      Background_Cloud_Layer_6: 60906907932145596
+      Background_Cloud_Layer_7: 3270984809484539924
+      Background_Cloud_Layer_8: 241101689891042013
+      Background_Cloud_Layer_9: 6864313327370408659
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
