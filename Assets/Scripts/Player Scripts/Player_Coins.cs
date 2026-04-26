@@ -4,6 +4,8 @@ public class Player_Coins : MonoBehaviour
 {
     public Text coinText;
     public static int coins = 0;
+    public int coinsOnLevelStart = 0;
+
 
     private const float delay = 0.001f;
     private bool currentlyCollecting = false;
@@ -37,6 +39,15 @@ public class Player_Coins : MonoBehaviour
         coinText.text = ": " + coins.ToString();
 
         Invoke(nameof(endCollection), delay);
+    }
+    public void resetCoins()
+    {
+        coins = coinsOnLevelStart;
+        coinText.text = ": " + coins.ToString();
+    }
+    public void saveCoinsFromPreviousLevel()
+    {
+        coinsOnLevelStart = coins;
     }
 
     private void endCollection()

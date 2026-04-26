@@ -11,6 +11,7 @@ public class Player_Jump : MonoBehaviour
     private Rigidbody2D rb;
     private Player_Dash dashScript;
     [SerializeField] Animator animator;
+    private BoxCollider2D playerHitBox;
 
     //sound
     public AudioClip jumpSFX;
@@ -19,6 +20,7 @@ public class Player_Jump : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        playerHitBox = GetComponent<BoxCollider2D>();
         // get the gravity value for calculating jump height
         gravity = Physics2D.gravity.y;
         gravity *= rb.gravityScale;
@@ -74,7 +76,7 @@ public class Player_Jump : MonoBehaviour
     }
     bool isGrounded()
     {
-        bool Grounded = rb.IsTouchingLayers(LayerMask.GetMask("Floor")) ||  rb.IsTouchingLayers(LayerMask.GetMask("Enemy")) || rb.IsTouchingLayers(LayerMask.GetMask("Slippery")) || rb.IsTouchingLayers(LayerMask.GetMask("Platform"));
+        bool Grounded = playerHitBox.IsTouchingLayers(LayerMask.GetMask("Floor")) ||  playerHitBox.IsTouchingLayers(LayerMask.GetMask("Enemy")) || playerHitBox.IsTouchingLayers(LayerMask.GetMask("Slippery")) || playerHitBox .IsTouchingLayers(LayerMask.GetMask("Platform"));
        
       
      

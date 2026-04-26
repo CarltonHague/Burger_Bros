@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 
 public class Player_Health : MonoBehaviour
 {
@@ -17,6 +19,8 @@ public class Player_Health : MonoBehaviour
     [SerializeField] private float invulnerabilityDuration = 0.25f;
     private bool isInvulnerable = false;
     [SerializeField] MovingDeathZone movingDeathZone;
+    private Player_Shoot ammo;
+    private Player_Coins coins;
 
     //death screen
     //[SerializeField] private Image cutSceneLoader;
@@ -29,9 +33,22 @@ public class Player_Health : MonoBehaviour
         health = maxHealth;
         changeHeartSprite();
         playerRigidbody = GetComponent<Rigidbody2D>();
-       
+        ammo = GetComponent<Player_Shoot>();
+        coins = GetComponent<Player_Coins>();
     }
-
+    private void resetPlayer()
+    {
+        health = maxHealth;
+        changeHeartSprite();
+        coins.resetCoins();
+        ammo.resetAmmo();
+        playerRigidbody.position = startOfLevel.transform.position;
+        playerRigidbody.linearVelocity = Vector2.zero;
+        if (movingDeathZone != null)
+        {
+            movingDeathZone.resetToCheckpoint(startOfLevel.transform);
+        }
+    }
     private void takeDamage()
     {
         if (isInvulnerable)
@@ -43,7 +60,9 @@ public class Player_Health : MonoBehaviour
         if (health <= 0)
         {
             //spawn at start
+            
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            
 
         }
         else
@@ -78,16 +97,32 @@ public class Player_Health : MonoBehaviour
         {
             lastCheckpoint = other.transform;
         }
-        if (other.gameObject.tag == "DeathZone")
+        if (other.CompareTag("DeathZone") && !isInvulnerable)
         {
-            if(playerHitBox.IsTouching(other) && !isInvulnerable)
+           if(playerHitBox.IsTouching(other))
             {
                 takeDamage();
             }
-           
         }
 
+
+
+
+
     }
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag("DeathZone") && !isInvulnerable)
+        {
+            if(playerHitBox.IsTouching(other))
+            {
+                takeDamage();
+            }
+        }
+    }
+
+
+
     private IEnumerator InvulnerabilityCoroutine()
     {
         

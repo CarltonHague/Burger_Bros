@@ -286,6 +286,8 @@ GameObject:
   - component: {fileID: 6218215932807297046}
   - component: {fileID: 2223512801565200684}
   - component: {fileID: 7593517670996413249}
+  - component: {fileID: 1457221274594735414}
+  - component: {fileID: 6836699977149413235}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -475,7 +477,19 @@ MonoBehaviour:
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6836699977149413235}
+        m_TargetAssemblyTypeName: QuitGame, Assembly-CSharp
+        m_MethodName: exitGame
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 11cf0780-c7ea-4a41-9fb0-a36419423675
     m_ActionName: 'Global/Quit game[/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 0
@@ -876,6 +890,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player_Coins
   coinText: {fileID: 0}
+  coinsOnLevelStart: 0
 --- !u!114 &6218215932807297046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -999,6 +1014,39 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1457221274594735414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6500490034975575206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff589bd1dc775c540943ad0bf8ae2176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player_Loading
+--- !u!114 &6836699977149413235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6500490034975575206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e33c6a5109426de4d892821b923df45f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuitGame
+  quitAction:
+    m_Name: Quit
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: a7fa7194-7e1c-450a-bfbe-a4a96b109f12
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!1 &7749750866442641782
 GameObject:
   m_ObjectHideFlags: 0

@@ -86,4 +86,9 @@ public class Player_Shoot : MonoBehaviour
             }
         }
     }
+    public void resetAmmo()
+    {
+        amountOfBullets = maxBullets;
+        changeAmmoSprite();
+    }
 }

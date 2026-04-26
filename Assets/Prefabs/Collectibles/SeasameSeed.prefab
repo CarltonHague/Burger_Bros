@@ -32,6 +32,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -496274333180387227, guid: 262ca00d262d2384187fa7b030a42cba, type: 3}
+    - target: {fileID: 5246931933640208807, guid: d2003f41a363439458aa623e840c7231, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5246931933640208807, guid: d2003f41a363439458aa623e840c7231, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5246931933640208807, guid: d2003f41a363439458aa623e840c7231, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1651724269
+      objectReference: {fileID: 0}
     - target: {fileID: 7331982978775254902, guid: d2003f41a363439458aa623e840c7231, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.27778262
