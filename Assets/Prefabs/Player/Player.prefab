@@ -752,7 +752,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 26e66accb2e9c434c887d725e1622736, type: 2}
+  - {fileID: -876546973899608171, guid: 08c2d1ae376136e42a1f85d1ac4d8b19, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -785,7 +785,7 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
+        time: 1
         value: 1
         inSlope: 0
         outSlope: 0
@@ -829,7 +829,7 @@ LineRenderer:
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
-    textureMode: 0
+    textureMode: 1
     textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
@@ -849,7 +849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player_Grapple
   grappleDetector: {fileID: 3409347391161847009}
-  grapplePullSpeed: 8
+  grapplePullSpeed: 6
   grappleStopDistance: 1
   SFX: {fileID: 8300000, guid: ace30e64f2106c4479edaa59ee11625a, type: 3}
   volume: 0.9

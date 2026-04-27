@@ -8,6 +8,7 @@ public class BreakPlatform : MonoBehaviour
     Color originalColor, halfbroke = Color.orange, nearlyBroke = Color.red;
     [SerializeField] private float timeToBreakInSeconds = 3f;
     [SerializeField] private float timeToRespawnInSeconds = 5f;
+    [SerializeField] Sprite orginalSprite, HalfBroke, NearlyBroke;
     bool playerOnPlatform = false;
     public void setPlayerOnPlatform(bool value) => playerOnPlatform = value;
     bool isBreaking = false;
@@ -46,10 +47,10 @@ public class BreakPlatform : MonoBehaviour
     {
         if(isBreaking)
         {
-            spriteRenderer.color = halfbroke;
+            spriteRenderer.sprite = HalfBroke;
             yield return new WaitForSeconds(timeToBreakInSeconds / 2);
           
-            spriteRenderer.color = nearlyBroke;
+            spriteRenderer.sprite = NearlyBroke;
             yield return new WaitForSeconds(timeToBreakInSeconds / 2);
 
             spriteRenderer.enabled = false;
@@ -60,7 +61,7 @@ public class BreakPlatform : MonoBehaviour
    
             yield return new WaitForSeconds(timeToRespawnInSeconds);
             spriteRenderer.enabled = true;
-            spriteRenderer.color = originalColor;
+            spriteRenderer.sprite = orginalSprite;
             foreach (BoxCollider2D boxCollider in boxColliders)
             {
                 boxCollider.enabled = true;
@@ -71,7 +72,7 @@ public class BreakPlatform : MonoBehaviour
     public void ResetPlatform()
     {
        spriteRenderer.enabled = true;
-       spriteRenderer.color = originalColor;
+       spriteRenderer.sprite = orginalSprite;
        
 
     }

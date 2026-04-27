@@ -74,7 +74,7 @@ public class Tomato : MonoBehaviour
     {
         if (cooldown > secBetweenShots)
         {
-           
+           animator.SetTrigger("Spit start");
             cooldown = 0;
             Instantiate(bulletPrefab, shootPoint.transform.position, shootPoint.transform.rotation);
         }

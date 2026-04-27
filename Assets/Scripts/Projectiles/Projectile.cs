@@ -3,6 +3,11 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public float speed = 10.0f;
+    
+    private void Awake()
+    {
+        
+    }
 
     private void Update()
     {
@@ -35,6 +40,7 @@ public class Projectile : MonoBehaviour
 
     private void deflected()
     {
+        
         this.transform.eulerAngles += new Vector3(0, 0, 180);
         this.gameObject.tag = "Enemy Projectile";
         this.gameObject.layer = LayerMask.NameToLayer("Enemy");
