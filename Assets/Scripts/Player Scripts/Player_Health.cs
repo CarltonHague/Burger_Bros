@@ -12,6 +12,11 @@ public class Player_Health : MonoBehaviour
     public int maxHealth;
     public Image heartUIDisplay;
     public Sprite[] heartSprites;
+
+    public Image deathScreenDisplay;
+    public Sprite deathScreenSprite;
+    public float deathScreenTimer = 3.5f;
+
     public GameObject startOfLevel;
     public Transform lastCheckpoint;
     private BoxCollider2D playerHitBox;
@@ -22,9 +27,11 @@ public class Player_Health : MonoBehaviour
     private Player_Shoot ammo;
     private Player_Coins coins;
 
-    //death screen
-    //[SerializeField] private Image cutSceneLoader;
-    //[SerializeField] private float fadeTime;
+
+    //sound
+    public AudioClip SFX;
+    public float volume = 0.9f;
+    private AudioSource music;
 
 
     private void Awake()
@@ -35,19 +42,40 @@ public class Player_Health : MonoBehaviour
         playerRigidbody = GetComponent<Rigidbody2D>();
         ammo = GetComponent<Player_Shoot>();
         coins = GetComponent<Player_Coins>();
+        music = GetComponent<AudioSource>();
     }
-    private void resetPlayer()
+
+    void playSound()
     {
-        health = maxHealth;
-        changeHeartSprite();
-        coins.resetCoins();
-        ammo.resetAmmo();
-        playerRigidbody.position = startOfLevel.transform.position;
-        playerRigidbody.linearVelocity = Vector2.zero;
-        if (movingDeathZone != null)
-        {
-            movingDeathZone.resetToCheckpoint(startOfLevel.transform);
-        }
+        AudioSource.PlayClipAtPoint(SFX, transform.position, volume);
+    }
+
+    //private void resetPlayer()
+    //{
+    //    health = maxHealth;
+    //    changeHeartSprite();
+    //    coins.resetCoins();
+    //    ammo.resetAmmo();
+    //    playerRigidbody.position = startOfLevel.transform.position;
+    //    playerRigidbody.linearVelocity = Vector2.zero;
+    //    if (movingDeathZone != null)
+    //    {
+    //        movingDeathZone.resetToCheckpoint(startOfLevel.transform);
+    //    }
+    //}
+
+    private void deathScreen()
+    {
+        playSound();
+        music.mute = true;
+        deathScreenDisplay.enabled = true;
+        deathScreenDisplay.sprite = deathScreenSprite;
+        Invoke(nameof(respawnAtStart), deathScreenTimer);
+    }
+    private void respawnAtStart()
+    {
+        deathScreenDisplay.enabled = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     private void takeDamage()
     {
@@ -60,8 +88,7 @@ public class Player_Health : MonoBehaviour
         if (health <= 0)
         {
             //spawn at start
-            
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            deathScreen();
             
 
         }
@@ -80,7 +107,10 @@ public class Player_Health : MonoBehaviour
 
     private void changeHeartSprite()
     {
-        heartUIDisplay.sprite = heartSprites[health];
+        if ( health <= maxHealth && health >= 0)
+        {
+            heartUIDisplay.sprite = heartSprites[health];
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

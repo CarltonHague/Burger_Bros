@@ -141,8 +141,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Button
   unpressedSprite: {fileID: -3753728236534528485, guid: 365f2f02e30856e4f980fdef708a27a6, type: 3}
   pressedSprite: {fileID: -1487642525021310482, guid: 365f2f02e30856e4f980fdef708a27a6, type: 3}
-  SFX: {fileID: 8300000, guid: ac790f4d5e094d746ab8badf936b6763, type: 3}
-  volume: 0.9
 --- !u!61 &3156863121849733969
 BoxCollider2D:
   m_ObjectHideFlags: 0

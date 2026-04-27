@@ -722,7 +722,7 @@ DistanceJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: -231.83824, y: -87.070496}
   m_AutoConfigureDistance: 0
   m_Distance: 3.6746392
   m_MaxDistanceOnly: 1
@@ -873,10 +873,15 @@ MonoBehaviour:
   - {fileID: -2222103351588086253, guid: 77b425f837e0c404ab529da94af8e814, type: 3}
   - {fileID: -899931925995044808, guid: 77b425f837e0c404ab529da94af8e814, type: 3}
   - {fileID: 9087237326730622042, guid: 77b425f837e0c404ab529da94af8e814, type: 3}
+  deathScreenDisplay: {fileID: 0}
+  deathScreenSprite: {fileID: -3177703152804382613, guid: 0b04c9d68bf1a0e449610463371d7cce, type: 3}
+  deathScreenTimer: 3.5
   startOfLevel: {fileID: 0}
   lastCheckpoint: {fileID: 0}
   invulnerabilityDuration: 0.2
   movingDeathZone: {fileID: 0}
+  SFX: {fileID: 8300000, guid: 9e1255a9090180e4b9329285825d042a, type: 3}
+  volume: 1
 --- !u!114 &7958441446855927934
 MonoBehaviour:
   m_ObjectHideFlags: 0
