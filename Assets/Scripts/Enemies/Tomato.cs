@@ -103,8 +103,6 @@ public class Tomato : MonoBehaviour
             Invoke(nameof(killMeNow), deathDelay);
         }
     }
-
-
     private void killMeNow()
     {
         Instantiate(ketchupDrop, transform.position, Quaternion.identity);

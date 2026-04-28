@@ -54,20 +54,6 @@ public class Player_Health : MonoBehaviour
         }
     }
 
-    //private void resetPlayer()
-    //{
-    //    health = maxHealth;
-    //    changeHeartSprite();
-    //    coins.resetCoins();
-    //    ammo.resetAmmo();
-    //    playerRigidbody.position = startOfLevel.transform.position;
-    //    playerRigidbody.linearVelocity = Vector2.zero;
-    //    if (movingDeathZone != null)
-    //    {
-    //        movingDeathZone.resetToCheckpoint(startOfLevel.transform);
-    //    }
-    //}
-
     private void deathScreen()
     {
         isInvulnerable = true;
@@ -96,8 +82,6 @@ public class Player_Health : MonoBehaviour
         {
             //spawn at start
             deathScreen();
-            
-
         }
         else
         {
@@ -119,7 +103,6 @@ public class Player_Health : MonoBehaviour
             heartUIDisplay.sprite = heartSprites[health];
         }
     }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Enemy Projectile")
@@ -141,11 +124,6 @@ public class Player_Health : MonoBehaviour
                 takeDamage();
             }
         }
-
-
-
-
-
     }
     private void OnTriggerStay2D(Collider2D other)
     {

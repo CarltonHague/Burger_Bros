@@ -51,8 +51,6 @@ public class Player_Shoot : MonoBehaviour
             changeAmmoSprite();
         }
     }
-
-
     public void shoot(InputAction.CallbackContext context)
     {
         if (hasGun && amountOfBullets > 0 && !onCooldown)
@@ -69,7 +67,6 @@ public class Player_Shoot : MonoBehaviour
     {
         onCooldown = false;
     }
-
     private void changeAmmoSprite()
     {
         ammoUIDisplay.sprite = ammoSpriteArray[amountOfBullets];
