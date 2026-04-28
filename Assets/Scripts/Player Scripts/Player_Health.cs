@@ -32,7 +32,7 @@ public class Player_Health : MonoBehaviour
     public AudioClip SFX;
     public float volume = 0.9f;
     private AudioSource music;
-
+    private bool isPlaying = false;
 
     private void Awake()
     {
@@ -47,7 +47,11 @@ public class Player_Health : MonoBehaviour
 
     void playSound()
     {
-        AudioSource.PlayClipAtPoint(SFX, transform.position, volume);
+        if (!isPlaying)
+        {
+            AudioSource.PlayClipAtPoint(SFX, transform.position, volume);
+            isPlaying = true;
+        }
     }
 
     //private void resetPlayer()
@@ -66,6 +70,7 @@ public class Player_Health : MonoBehaviour
 
     private void deathScreen()
     {
+        isInvulnerable = true;
         playSound();
         music.mute = true;
         deathScreenDisplay.enabled = true;
@@ -75,6 +80,8 @@ public class Player_Health : MonoBehaviour
     private void respawnAtStart()
     {
         deathScreenDisplay.enabled = false;
+        isInvulnerable = false;
+        isPlaying = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     private void takeDamage()
