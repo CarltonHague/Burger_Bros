@@ -822,6 +822,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2855095275239660900, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
+      propertyPath: volume
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2855095275239660900, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
       propertyPath: dashUITracker
       value: 
       objectReference: {fileID: 1787314286}
@@ -850,6 +854,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6949044474674334104, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
+      propertyPath: volume
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949044474674334104, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
       propertyPath: ammoUIDisplay
       value: 
       objectReference: {fileID: 1878130132}
@@ -865,6 +873,14 @@ PrefabInstance:
       propertyPath: coinText
       value: 
       objectReference: {fileID: 1792930856}
+    - target: {fileID: 8030497440834297814, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
+      propertyPath: volume
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170462624405330309, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
+      propertyPath: volume
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8817766720876437755, guid: 7b32701cda8840941b1c6079b43e7f59, type: 3}
       propertyPath: m_LocalPosition.x
       value: -516.42
