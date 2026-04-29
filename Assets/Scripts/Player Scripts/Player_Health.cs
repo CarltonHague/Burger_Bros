@@ -3,8 +3,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System.Runtime.CompilerServices;
-using Unity.VisualScripting;
 
 public class Player_Health : MonoBehaviour
 {
@@ -24,10 +22,10 @@ public class Player_Health : MonoBehaviour
     [SerializeField] private float invulnerabilityDuration = 0.25f;
     private bool isInvulnerable = false;
     [SerializeField] MovingDeathZone movingDeathZone;
-    private Player_Shoot ammo;
-    private Player_Coins coins;
-
-
+    
+    Player_Movement movement;
+    Player_Jump jump;  
+    Player_Shoot shoot;
     //sound
     public AudioClip SFX;
     public float volume = 0.9f;
@@ -36,13 +34,18 @@ public class Player_Health : MonoBehaviour
 
     private void Awake()
     {
+        
         playerHitBox = GetComponent<BoxCollider2D>();
         health = maxHealth;
         changeHeartSprite();
         playerRigidbody = GetComponent<Rigidbody2D>();
-        ammo = GetComponent<Player_Shoot>();
-        coins = GetComponent<Player_Coins>();
         music = GetComponent<AudioSource>();
+    }
+    private void Start()
+    {
+        jump = GetComponent<Player_Jump>();
+        shoot = GetComponent<Player_Shoot>();
+        movement = GetComponent<Player_Movement>();
     }
 
     void playSound()
@@ -61,6 +64,9 @@ public class Player_Health : MonoBehaviour
         music.mute = true;
         deathScreenDisplay.enabled = true;
         deathScreenDisplay.sprite = deathScreenSprite;
+        movement.canMove = false;
+        jump.volume = 0;
+        shoot.volume = 0;
         Invoke(nameof(respawnAtStart), deathScreenTimer);
     }
     private void respawnAtStart()
